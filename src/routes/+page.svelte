@@ -1,6 +1,4 @@
 <script lang="ts">
-  import KitCard from "$lib/KitCard.svelte";
-  import { ls } from "$lib/localStorage.svelte";
   import StarRating from "$lib/StarRating.svelte";
   import type { PageProps } from "./$types";
 
@@ -74,16 +72,7 @@
             alt="Luxury home with full WiFi coverage"
             class=""
           />
-          <!-- <div
-            class="absolute -bottom-6 -left-6  p-6 "
-          >
-            <div class="text-emerald-400 text-4xl font-mono font-bold">
-              1.3Gbps
-            </div>
-            <div class="text-sm text-zinc-400">
-              Average speed across entire property
-            </div>
-          </div> -->
+         
         </div>
       </div>
     </div>
