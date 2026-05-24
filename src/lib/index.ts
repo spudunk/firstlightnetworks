@@ -1,1 +1,289 @@
+import { features } from "process";
+
 // place files you want to import through the `$lib` alias in this folder.
+export const business = {
+  name: "First Light Networks",
+  rating: { score: 5.0, count: 6, label: "customers" },
+};
+
+export const headerLinks = [
+  { href: '/solutions', label: 'Solutions & Kits' },
+  // { href: '/for-builders', label: 'For Builders' },
+  // { href: '/resources', label: 'Resources' },
+  { href: '/how-it-works', label: 'How It Works' },
+  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/about', label: 'About' }
+]
+
+export const footerLinks = [
+  {
+    heading: 'Company',
+    links: [
+      { href: '/about', label: 'About Us' },
+      { href: '/portfolio', label: 'Portfolio' },
+      { href: '/contact', label: 'Contact' }
+    ]
+  },
+  // {
+  // 	heading: 'Solutions',
+  // 	links: [
+  // 		{ href: '/solutions', label: 'Pre-Configured Kits' },
+  // 		{ href: '/solutions', label: 'Individual Components' },
+  // 		{ href: '/quote', label: 'Custom Quote' }
+  // 	]
+  // },
+  // {
+  // 	heading: 'Resources',
+  // 	links: [
+  // 		{ href: '/resources', label: 'Learning Center' },
+  // 		{ href: '/how-it-works', label: 'How It Works' },
+  // 		{ href: '/for-builders', label: 'For Builders' }
+  // 	]
+  // },
+  {
+    heading: 'Legal',
+    links: [
+      { href: '', label: 'Privacy Policy' },
+      { href: '', label: 'Terms of Service' }
+    ]
+  }
+]
+
+
+export const steps = [
+  { number: '01', title: 'Consultation', desc: 'Share your building plans and requirements. We review and send a detailed proposal with coverage maps, hardware list, and pricing within 3 days.' },
+  { number: '02', title: 'System Design', desc: 'We create and send detailed wiring plans for your electrician so they can install, terminate, and test all the structured wiring while the walls are open.' },
+  { number: '03', title: 'Build & Test', desc: 'Your kit is assembled, configured, and tested in our lab. We verify everything works then label, pack, and ship the whole system.' },
+  { number: '04', title: 'Installation', desc: 'Kits arrive labeled and ready. Your electrician or low-voltage team follows our simple plug-and-play guide. Average install: 3–5 hours.' },
+  { number: '05', title: 'Support & Handover', desc: 'We provide remote go-live support. Homeowners receive a simple guide and we remain available for any future questions or optimizations.' }
+];
+
+
+
+export const projects = [
+  {
+    type: 'Rural Residential',
+    title: 'Private Rural Ranch',
+    subtitle: '10-acre property, multiple outbuildings',
+    excerpt: [
+      'This customer lives in an area with poor cellular service. I installed an Omada wired network with indoor and outdoor Wi-Fi access points to extend coverage to the edges of the property. The owner can now make and receive calls and video calls anywhere on the property.',
+      'I also installed PoE cameras and a network video recorder for 24/7 monitoring of entrances from anywhere. They have an XGPON primary WAN, Starlink backup WAN, and UPS backup for the core of the network. They never lose Wi-Fi or internet access, even if the fiber is broken or the power goes out.'
+    ],
+    result: 'Full property Wi-Fi • 24/7 security monitoring • Never lose connectivity'
+  },
+  {
+    type: 'Commercial',
+    title: 'Country Market, Gas Station & Diner',
+    subtitle: 'Two-building business',
+    excerpt: [
+      'This business owner was having connectivity problems with their POS systems, pumps, and devices across two buildings. They had an existing Starlink setup, but the Wi-Fi was inadequate, only covering a small portion of the primary cinder-block building. The second building is metal.',
+      'I installed an Omada wired network through both buildings with 4 access points and a wireless bridge between them. This completely solved the Wi-Fi coverage issues and provided wired connections for computers and a printer throughout both buildings. I also installed 20 cameras and an NVR for 24/7 recording and remote monitoring.'
+    ],
+    result: 'Reliable POS & device connectivity • Full coverage indoors & out • Remote camera access'
+  },
+  {
+    type: 'Commercial',
+    title: 'Dairy with Fuel Tanks',
+    subtitle: '300ft between metal barns, no trenching possible',
+    excerpt: [
+      'This business owner wanted security cameras on their diesel tank and entrances at their dairy. They had fiber internet in the office. The best location for the cameras was on a metal barn building 300 ft from the office, separated by concrete and metal buildings. The entire area is concrete, so trenching was not an option. They also have large equipment that moves between buildings, so hanging aerial wire was not an option.',
+      'I installed an outdoor Omada mesh system with 2 nodes to extend the Wi-Fi over the entire property and connect a PoE switch in the outbuilding where the cameras were needed. Two PoE cameras were connected in the second building with 24/7 motion-triggered recording and remote monitoring, plus outdoor Wi-Fi for the entire area.'
+    ],
+    result: 'Outdoor mesh Wi-Fi • 24/7 motion-triggered recording • Remote monitoring anywhere'
+  },
+  {
+    type: 'Commercial',
+    title: 'Resort Hotel & Recreation',
+    subtitle: '20+ acres with hills and poor cellular',
+    excerpt: [
+      'This business is in an area with poor cellular service. They already had a Starlink setup with the maximum number of mesh nodes, but the Wi-Fi coverage was inadequate. For a primary WAN, I negotiated a business fiber connection in an area where FTTH isn’t available to residential customers. Starlink was used as the backup WAN, since the fiber infrastructure is pole-mounted.',
+      'An Omada wired network was installed to every room with 10 Gb MMF trunk lines serving as the backbone. 12 Wi-Fi access points were installed throughout the building and outdoors to cover all of the rooms, with most WAPs having future-proof 2.5 Gb uplinks.'
+    ],
+    result: 'Enterprise-grade wired + wireless • Future-proof 2.5 Gb uplinks on most WAPs'
+  },
+  {
+    type: 'Rural Residential',
+    title: 'Rural Residential',
+    subtitle: '5-acre lot, 3 buildings',
+    excerpt: [
+      'This customer has a 5-acre lot with 3 buildings: a single-story stick-built house with attached garage, a small wood barn 300 ft north of the house, and a large metal shop 50 ft south of the house. There was suitable conduit available between the house and shop. The customer already had Starlink with built-in Wi-Fi.',
+      'The router was in the house, so the dish had interference due to tree coverage around the house. I surveyed the area for a new dish location, and there was an area 80 ft west of the shop with open sky for the dish’s field of view. I moved the Starlink router to the shop so the OEM Starlink cable could reach the new dish location. Cat 6 backhaul connects the house to the shop.',
+      'An outdoor access point on the end of the house nearest the barn covers the entire used outdoor space with Wi-Fi. Two indoor access points—one in the shop and one in the house—complete the coverage of indoor spaces.'
+    ],
+    result: 'Clear line-of-sight Starlink • Whole-property Wi-Fi • Minimal disruption to landscaping'
+  },
+  {
+    type: 'Agricultural',
+    title: 'Rural Farm',
+    subtitle: '5-acre lot, 4 buildings',
+    excerpt: [
+      'This customer has a 5-acre lot with 4 buildings: a house, a garage 40 ft to the north of the house, a metal shop 20 ft north of the garage, and a barn 200 ft south of the house.',
+      'I installed Cat 6 direct burial between all of the buildings as a backbone. Indoor access points in each of the buildings cover all the indoor spaces and outdoor areas immediately around them.',
+      'Update: This system is still in operation 6 years later and has become the backbone for multiple critical IoT and automation devices. While the system is rudimentary and that hardware has been phased out, it\'s still completely reliable and forward-compatible. The customer will probably need to upgrade a few devices in 2-3 years, but the structured wiring won\'t will last another decade or more.'
+    ],
+    result: 'Wired backbone to every building • Indoor + immediate outdoor coverage • Simple, reliable'
+  },
+  // {
+  //   type: 'Rural Residential',
+  //   title: 'Custom Log Cabin with Shop',
+  //   subtitle: 'New construction + outbuildings',
+  //   excerpt: [
+  //     'This customer was building a new log cabin on their property, which already had an outbuilding and a large metal shop pole building. They already had Starlink set up at the outbuilding, but the Wi-Fi wasn’t reaching the shop or the new cabin. The area has poor cellular service, so they were often disconnected.',
+  //     'The customer had already done landscaping around all three buildings when we were brought in, so trenching fiber or conduit between the buildings was not allowed. We installed an outdoor Wi-Fi mesh system using 6 GHz 80 MHz wide mesh backhaul to link the buildings and share the WAN from the outbuilding to the other two. This choice leaves the 2.4 GHz and 5 GHz channels open for device connections, and the clear line of sight between buildings allows the 6 GHz channels to reach without issue.',
+  //     'Indoor access points were installed in both buildings to complete Wi-Fi coverage.'
+  //   ],
+  //   result: '6 GHz 80 MHz mesh links buildings • 2.4/5 GHz free for clients • Full indoor coverage'
+  // },
+];
+
+export const testimonials = [
+  {
+    name: "Mercer Mackey",
+    role: "Owner - Electrician, Full-Draw Electric",
+    text: "Chris' install instructions were completely dummy-proof. All I had to do is run wire and plug things in. I'll be offering Wi-Fi to all my customers from now on.",
+    image: "https://picsum.photos/id/63/128",
+    score: 5,
+  },
+  {
+    name: "Julian Q.",
+    role: "Owner, Private Ranch",
+    text: "I used to be stuck inside the house during work hours for my remote job, but now I can take the dogs out on the property and not miss any calls.",
+    image: "https://picsum.photos/id/65/128",
+    score: 5,
+  },
+  {
+    name: "Kyle Deskins",
+    role: "Owner, D9 Farms",
+    text: "The Wi-Fi works great! Staying online during power outages is a big plus and the cameras have made a big difference.",
+    image: "https://picsum.photos/id/64/128",
+    score: 5,
+  },
+  {
+    name: "Luke I.",
+    role: "Manager, Brim Rd Dairy",
+    text: "We haven't lost any diesel since putting the cameras up. Having Wi-Fi across the whole facility is a nice bonus too.",
+    image: "https://picsum.photos/id/62/128",
+    score: 5,
+  },
+];
+
+
+export const kits = [
+  {
+    title: "Essential Coverage",
+    subtitle: "Up to 4,000 sq. ft.",
+    price: "$999",
+    image: "",
+    features: [
+      "ER605 Advanced Omada Router",
+      "OC220 Upgraded Omada Controller",
+      "ES206GP 6-Port PoE Switch",
+      "EAP723 WiFi 7 Indoor Access Point",
+      "EAP650 IP69 Outdoor Access Point",
+      "Backup Uninerruptible Power Supply",
+      "Pre-configured with Expert Support",
+      "Expandable with any Omada Devices"
+    ],
+    buttonText: "Buy This Kit Now",
+    link: "https://buy.stripe.com/dRmbJ3brS9f3dlo0jT7IY01"
+  },
+  {
+    popular: true,
+    title: "Premium Whole-Property",
+    subtitle: "5,000 or more sq. ft. + Outdoor",
+    price: "Custom Pricing",
+    image: "",
+    features: [
+      "Custom Structured Wiring Map",
+      "Custom Network Design",
+      "Up to 200 Buildings",
+      "10Gb Fiber-Optic LAN",
+      "Multi-Gigabit Wi-Fi 7",
+      "Fast Outdoor Wi-Fi",
+      "Ultra-low Latency Design",
+      "Commercial Network Racks"
+    ],
+    buttonText: "Build Custom Quote",
+    link: "/quote"
+  },
+  {
+    title: "10 Gig Premium Starter",
+    subtitle: "Up to 10,000 sq. ft. + Outdoor",
+    price: "$4,250",
+    image: "",
+    features: [
+      "Custom Structured Wiring Map",
+      "Custom Network Design",
+      "Pre-Built Custom Switch Rack",
+      "10Gb Fiber (SFP+) Gateway and Switch",
+      "4x 2.5Gb Wi-Fi 7 Indoor Access Points",
+      "2x 2.5Gb Wi-Fi 7 Outdoor Access Points",
+      "Keystone Patch Panel",
+      "Rackmount UPS",
+    ], 
+    buttonText: "Buy This Kit Now",
+    link: "https://buy.stripe.com/8x25kF0Ne2QF6X0c2B7IY00"
+  },
+];
+
+export const preconfiguredKits = kits;
+
+export const outdoorPackages = [
+  { title: 'Pool & Patio', price: '$1,295', desc: '2 weatherproof APs + dedicated PoE' },
+  { title: 'Gardens & Grounds', price: '$895', desc: 'Mesh extenders for 1+ acres' },
+  { title: 'Dock & Waterfront', price: '$1,495', desc: 'Marine-grade units + long-range' }
+];
+
+export const components = [
+  { name: 'WiFi 6E Access Points', price: '$349', type: 'Indoor' },
+  { name: 'Outdoor Mesh AP', price: '$429', type: 'Outdoor' },
+  { name: '8-Port PoE Switch', price: '$189', type: 'Networking' },
+  { name: 'Cat6A Cabling Kit', price: '$95', type: 'Cabling' },
+  { name: 'PoE Injectors (pair)', price: '$59', type: 'Power' }
+];
+
+
+export const blogPosts = [
+  {
+    title: "WiFi Requirements for Modern Luxury Homes",
+    excerpt:
+      "What square footage, device density, and outdoor needs really mean for your next build.",
+    date: "May 2026",
+  },
+  {
+    title: "Mesh vs Traditional: What Builders Need to Know",
+    excerpt:
+      "Why wired backhaul and pre-configuration matter more than you think.",
+    date: "Apr 2026",
+  },
+  {
+    title: "Outdoor WiFi Best Practices for Pools & Patios",
+    excerpt:
+      "Choosing the right hardware and placement for reliable exterior coverage.",
+    date: "Mar 2026",
+  },
+  {
+    title: "Pre-Wiring Checklist for New Construction",
+    excerpt:
+      "The exact conduit, cable, and AP locations we recommend for every floor plan.",
+    date: "Feb 2026",
+  },
+];
+
+export const downloads = [
+  {
+    title: "WiFi Planning Guide for Builders",
+    type: "PDF • 18 pages",
+    desc: "Complete guide to specifying WiFi in custom homes",
+  },
+  {
+    title: "Sample Spec Sheet",
+    type: "PDF",
+    desc: "Ready-to-paste technical specifications",
+  },
+  {
+    title: "ROI Calculator",
+    type: "Spreadsheet",
+    desc: "Calculate margin and labor savings from offering kits",
+  },
+];

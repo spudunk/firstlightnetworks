@@ -20,6 +20,6 @@
     {/if}
   </div>
   {#if count && label}
-    <span class="text-zinc-400">{score} from {count} {label}</span>
+    <span class="text-zinc-400">{score.toFixed(1)} from {count} {label}</span>
   {/if}
 </div>

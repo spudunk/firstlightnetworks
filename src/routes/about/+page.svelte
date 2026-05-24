@@ -1,9 +1,11 @@
-<script>
-	const business = { name: 'First Light Networks' };
+<script lang="ts">
+  import type { PageProps } from "./$types";
+
+let { data }: PageProps = $props();
 </script>
 
 <svelte:head>
-	<title>About Us • {business.name}</title>
+	<title>About Us • {data.business.name}</title>
 </svelte:head>
 
 <div class="max-w-5xl mx-auto px-6 py-16">

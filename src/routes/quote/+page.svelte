@@ -12,6 +12,7 @@
 
 	let { data } = $props();
 
+	// svelte-ignore state_referenced_locally
 	const form = superForm(data.form, {
 		// @ts-expect-error zod v4 + superforms adapter typing
 		validators: zodClient(quoteSchema),
@@ -76,7 +77,7 @@
 
 <div class="min-h-screen bg-zinc-950 text-white">
 	<!-- Navbar simplified -->
-	<nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-md z-50 border-b border-zinc-800">
+	<!-- <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-md z-50 border-b border-zinc-800">
 		<div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
 			<a href="/" class="flex items-center gap-3">
 				<div class="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center text-xl font-bold">⚡</div>
@@ -87,7 +88,7 @@
 			</a>
 			<a href="/" class="text-sm hover:text-blue-400 transition">← Back to Home</a>
 		</div>
-	</nav>
+	</nav> -->
 
 	<div class="max-w-5xl mx-auto px-6 pt-24 pb-16">
 		<div class="text-center mb-12">

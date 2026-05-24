@@ -1,9 +1,11 @@
-<script>
+<script lang="ts">
   import KitCard from "$lib/KitCard.svelte";
+  import { ls } from "$lib/localStorage.svelte";
   import StarRating from "$lib/StarRating.svelte";
+  import type { PageProps } from "./$types";
 
-  let { data } = $props();
-  let currentSlide = $state(0);
+  let { data }: PageProps = $props();
+  // let currentSlide = $state(0);
 </script>
 
 <svelte:head>
@@ -16,7 +18,7 @@
     class="pt-24 pb-20 bg-linear-to-br from-zinc-900 via-zinc-950 to-black"
   >
     <div class="max-w-7xl mx-auto px-6 pt-16">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="grid md:grid-cols-2 gap-2 items-center">
         <div class="space-y-8">
           <div
             class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 rounded-full px-4 py-2 text-sm"
@@ -33,9 +35,10 @@
           </h1>
 
           <p class="text-xl text-zinc-400 max-w-lg">
-            Pre-configured, fully tested kits delivering flawless indoor +
-            outdoor coverage. Save time, impress clients, and eliminate
-            callbacks.
+            Pre-configured, fully tested kits delivering flawless indoor &amp;
+            outdoor coverage. <span class="text-zinc-200">
+              Save time, impress clients, lead the industry.
+            </span>
           </p>
 
           <div class="flex flex-wrap gap-4">
@@ -49,7 +52,7 @@
               href="#solutions"
               class="border border-zinc-700 hover:border-zinc-400 px-8 py-4 rounded-2xl font-semibold transition"
             >
-              See Solutions
+              Portfolio
             </a>
           </div>
 
@@ -67,20 +70,20 @@
         <!-- Hero Image -->
         <div class="relative">
           <img
-            src="https://picsum.photos/id/1015/800/620"
+            src="/barn.svg"
             alt="Luxury home with full WiFi coverage"
-            class="rounded-3xl shadow-2xl shadow-blue-950/50"
+            class=""
           />
-          <div
-            class="absolute -bottom-6 -left-6 bg-zinc-900 border border-zinc-700 rounded-2xl p-6 max-w-[220px]"
+          <!-- <div
+            class="absolute -bottom-6 -left-6  p-6 "
           >
             <div class="text-emerald-400 text-4xl font-mono font-bold">
-              1.2 Gbps
+              1.3Gbps
             </div>
             <div class="text-sm text-zinc-400">
               Average speed across entire property
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -91,9 +94,9 @@
     <div
       class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-x-12 gap-y-6 text-zinc-400 text-sm"
     >
-      <div>✅ Pre-wired for new construction</div>
+      <div>✅ Structured wiring plans for new construction</div>
       <div>✅ Full indoor + outdoor coverage</div>
-      <div>✅ Pre-configured & tested</div>
+      <div>✅ Pre-configured & tested kits</div>
       <div>✅ 3-year warranty</div>
       <div>✅ Builder volume pricing</div>
     </div>
@@ -124,30 +127,12 @@
           </p>
         </div>
         <div class="bg-zinc-900 p-8 rounded-3xl">
-          <div class="text-5xl mb-6">📞</div>
-          <h3 class="text-2xl font-semibold mb-3">Fewer Callbacks</h3>
+          <div class="text-5xl mb-6">🥇</div>
+          <h3 class="text-2xl font-semibold mb-3">Lead the Industry</h3>
           <p class="text-zinc-400">
-            Professional-grade wired systems with remote monitoring and support.
+            Built-in Wi-Fi is not common in custom home construction yet, but it will be.
           </p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Kits -->
-  <section id="solutions" class="py-20 bg-black">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="flex justify-between items-end mb-12">
-        <h2 class="text-4xl font-semibold">Featured Kits</h2>
-        <a href="/solutions" class="text-blue-400 hover:underline"
-          >View all kits →</a
-        >
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        {#each data.kits as kit}
-          <KitCard {kit} business={data.business} />
-        {/each}
       </div>
     </div>
   </section>
