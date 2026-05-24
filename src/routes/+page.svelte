@@ -18,7 +18,7 @@
 <div class="min-h-screen bg-zinc-950 text-white">
   <!-- Hero -->
   <section
-    class="pt-24 pb-20 bg-linear-to-br from-zinc-900 via-zinc-950 to-black"
+    class="pt-8 sm:pt-16 md:pt-24 pb-20 bg-linear-to-br from-zinc-900 via-zinc-950 to-black"
   >
     <div class="max-w-7xl mx-auto px-6 pt-16">
       <div class="grid md:grid-cols-2 gap-2 items-center">
