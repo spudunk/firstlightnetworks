@@ -137,35 +137,43 @@ export const projects = [
   // },
 ];
 
-export const testimonials = [
-  {
-    name: "Mercer Mackey",
-    role: "Owner - Electrician, Full-Draw Electric",
-    text: "Chris' install instructions were completely dummy-proof. All I had to do is run wire and plug things in. I'll be offering Wi-Fi to all my customers from now on.",
-    image: "https://picsum.photos/id/63/128",
-    score: 5,
-  },
-  {
-    name: "Julian Q.",
-    role: "Owner, Private Ranch",
-    text: "I used to be stuck inside the house during work hours for my remote job, but now I can take the dogs out on the property and not miss any calls.",
-    image: "https://picsum.photos/id/65/128",
-    score: 5,
-  },
-  {
-    name: "Kyle Deskins",
-    role: "Owner, D9 Farms",
-    text: "The Wi-Fi works great! Staying online during power outages is a big plus and the cameras have made a big difference.",
-    image: "https://picsum.photos/id/64/128",
-    score: 5,
-  },
-  {
-    name: "Luke I.",
-    role: "Manager, Brim Rd Dairy",
-    text: "We haven't lost any diesel since putting the cameras up. Having Wi-Fi across the whole facility is a nice bonus too.",
-    image: "https://picsum.photos/id/62/128",
-    score: 5,
-  },
+type Testimonial =   
+{
+    name: string,
+    role: string,
+    text: string,
+    image: string,
+    score: number,
+  }
+export const testimonials: Testimonial[] = [
+  // {
+  //   name: "Mercer Mackey",
+  //   role: "Owner - Electrician, Full-Draw Electric",
+  //   text: "Chris' install instructions were completely dummy-proof. All I had to do is run wire and plug things in. I'll be offering Wi-Fi to all my customers from now on.",
+  //   image: "https://picsum.photos/id/63/128",
+  //   score: 5,
+  // },
+  // {
+  //   name: "Julian Q.",
+  //   role: "Owner, Private Ranch",
+  //   text: "I used to be stuck inside the house during work hours for my remote job, but now I can take the dogs out on the property and not miss any calls.",
+  //   image: "https://picsum.photos/id/65/128",
+  //   score: 5,
+  // },
+  // {
+  //   name: "Kyle Deskins",
+  //   role: "Owner, D9 Farms",
+  //   text: "The Wi-Fi works great! Staying online during power outages is a big plus and the cameras have made a big difference.",
+  //   image: "https://picsum.photos/id/64/128",
+  //   score: 5,
+  // },
+  // {
+  //   name: "Luke I.",
+  //   role: "Manager, Brim Rd Dairy",
+  //   text: "We haven't lost any diesel since putting the cameras up. Having Wi-Fi across the whole facility is a nice bonus too.",
+  //   image: "https://picsum.photos/id/62/128",
+  //   score: 5,
+  // },
 ];
 
 

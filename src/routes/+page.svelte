@@ -3,8 +3,7 @@
   import Clock from "virtual:icons/mdi/clock-outline";
   import Home from "virtual:icons/mdi/home-outline";
   import Lead from "virtual:icons/mdi/award";
-  
-  
+
   import StarRating from "$lib/StarRating.svelte";
   import type { PageProps } from "./$types";
 
@@ -107,7 +106,9 @@
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-zinc-900 p-8 rounded-3xl">
           <div class="text-5xl mb-6"><Clock /></div>
-          <h3 class="text-2xl font-semibold mb-3 text-emerald-200">Save Installation Time</h3>
+          <h3 class="text-2xl font-semibold mb-3 text-emerald-200">
+            Save Installation Time
+          </h3>
           <p class="text-zinc-400">
             Pre-configured kits arrive ready to plug in. Most installs take
             under 4 hours.
@@ -115,7 +116,9 @@
         </div>
         <div class="bg-zinc-900 p-8 rounded-3xl">
           <div class="text-5xl mb-6"><Home /></div>
-          <h3 class="text-2xl font-semibold mb-3 text-emerald-200">Impress Homeowners</h3>
+          <h3 class="text-2xl font-semibold mb-3 text-emerald-200">
+            Impress Homeowners
+          </h3>
           <p class="text-zinc-400">
             Reliable whole-home + outdoor coverage (patio, pool, garage) as a
             premium upsell.
@@ -123,7 +126,9 @@
         </div>
         <div class="bg-zinc-900 p-8 rounded-3xl">
           <div class="text-5xl mb-6"><Lead /></div>
-          <h3 class="text-2xl font-semibold mb-3 text-emerald-200">Lead the Industry</h3>
+          <h3 class="text-2xl font-semibold mb-3 text-emerald-200">
+            Lead the Industry
+          </h3>
           <p class="text-zinc-400">
             Built-in Wi-Fi is not common in custom home construction yet, but it
             will be.
@@ -134,28 +139,30 @@
   </section>
 
   <!-- Testimonials -->
-  <section class="py-20 bg-zinc-900">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-4xl font-semibold text-center mb-12">
-        What Customers Are Saying
-      </h2>
+  {#if data.testimonials.length > 0}
+    <section class="py-20 bg-zinc-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-semibold text-center mb-12">
+          What Customers Are Saying
+        </h2>
 
-      <div class="grid md:grid-cols-2 gap-8">
-        {#each data.testimonials as testimonial}
-          <div class="bg-zinc-950 p-10 rounded-3xl">
-            <p class="text-lg leading-relaxed">"{testimonial.text}"</p>
-            <div class="flex items-center gap-4 mt-10">
-              <div>
-                <div class="font-semibold">{testimonial.name}</div>
-                <div class="text-sm text-zinc-400">{testimonial.role}</div>
+        <div class="grid md:grid-cols-2 gap-8">
+          {#each data.testimonials as testimonial}
+            <div class="bg-zinc-950 p-10 rounded-3xl">
+              <p class="text-lg leading-relaxed">"{testimonial.text}"</p>
+              <div class="flex items-center gap-4 mt-10">
+                <div>
+                  <div class="font-semibold">{testimonial.name}</div>
+                  <div class="text-sm text-zinc-400">{testimonial.role}</div>
+                </div>
+                <StarRating score={testimonial.score} />
               </div>
-              <StarRating score={testimonial.score} />
             </div>
-          </div>
-        {/each}
+          {/each}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  {/if}
 
   <!-- Final CTA -->
   <section id="quote" class="py-24 bg-linear-to-br from-blue-950 to-zinc-950">
