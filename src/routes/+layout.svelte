@@ -4,7 +4,6 @@
   import Logo from "$lib/Logo.svelte";
   import type { LayoutProps } from "./$types";
   import { slide } from "svelte/transition";
-  import { ls } from "$lib/localStorage.svelte";
 
   let { data, children }: LayoutProps = $props();
   let mobileOpen = $state(false);
@@ -92,19 +91,12 @@
           <a href={link.href} class="py-1">{link.label}</a>
         {/each}
         <a href="/contact" class="py-1">Contact</a>
-        {#if ls.selectedKit}
-          <a
-            href="/checkout"
-            class="mt-2 bg-emerald-600 text-center py-3 rounded-2xl font-semibold"
-            >Checkout</a
-          >
-        {:else}
-          <a
-            href="/quote"
-            class="mt-2 bg-blue-600 text-center py-3 rounded-2xl font-semibold"
-            >Get Quote</a
-          >
-        {/if}
+
+        <a
+          href="/quote"
+          class="mt-2 bg-blue-600 text-center py-3 rounded-2xl font-semibold"
+          >Get Quote</a
+        >
       </div>
     {/if}
   </nav>

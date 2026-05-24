@@ -96,7 +96,11 @@
 			<p class="text-xl text-zinc-400 mt-3">Most quotes are delivered within 24 hours</p>
 		</div>
 
-		<form method="POST" use:enhance class="space-y-10">
+		<div class="text-center mb-12 py-4"> 
+			<p class="text-3xl text-blue-300 mt-3">Quote form coming soon... Please <a class="text-blue-500 underline" href="/contact">contact us</a> for custom quotes.</p>
+		</div>
+
+		<form method="POST" use:enhance class="space-y-10" inert>
 			<!-- 1. Contact Information -->
 			<div class="bg-zinc-900 rounded-3xl p-8">
 				<h2 class="text-2xl font-semibold mb-6 flex items-center gap-3">
@@ -144,7 +148,7 @@
 					<div class="text-sm font-medium text-zinc-300 mb-3">Number of Units / Buildings</div>
 					<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 						<TextInput form={form} field="numberOfUnits.mainHouse" label="Main House" type="number" />
-						<TextInput form={form} field="numberOfUnits.guestHouse" label="Guest House / Casita" type="number" />
+						<TextInput form={form} field="numberOfUnits.guestHouse" label="Guest House / ADU" type="number" />
 						<TextInput form={form} field="numberOfUnits.garage" label="Garage / Workshop" type="number" />
 						<TextInput form={form} field="numberOfUnits.poolHouse" label="Pool House / Outdoor Kitchen" type="number" />
 					</div>

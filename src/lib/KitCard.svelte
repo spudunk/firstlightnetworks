@@ -1,34 +1,16 @@
 <script lang="ts">
-	import { selectKit, unselectKit } from './localStorage.svelte.ts';
 
-	let { kit, selected, i } = $props();
+	let { kit, i } = $props();
 
-	let isSelected = $derived(selected === i);
+
 
 	let isHovered = $state(false);
 
-	function handleClick() {
-		if (isSelected) {
-			unselectKit();
-		} else {
-			selectKit(kit);
-		}
-	}
 
-	let buttonText = $derived(
-		isSelected && isHovered ? 'Unselect' : isSelected ? 'Selected' : kit.buttonText
-	);
 
-	let buttonClass = $derived(
-		isSelected
-			? 'bg-emerald-600 hover:bg-emerald-500'
-			: kit.popular
-				? 'bg-blue-600 hover:bg-blue-500'
-				: 'bg-zinc-800 hover:bg-blue-600'
-	);
 </script>
 
-<div class="bg-zinc-900 rounded-3xl overflow-hidden group {isSelected ? 'ring-2 ring-emerald-500 relative' : ''} {kit.popular && !isSelected ? 'ring-2 ring-blue-600 relative' : ''}">
+<div class="bg-zinc-900 rounded-3xl overflow-hidden group {'ring-2 ring-emerald-500 relative'} {kit.popular ? 'ring-2 ring-blue-600 relative' : ''}">
 	{#if kit.popular}
 		<div class="absolute top-2 right-2 bg-blue-600 text-xs font-semibold px-4 py-1 rounded-full">MOST POPULAR</div>
 	{/if}
@@ -44,13 +26,13 @@
 				{/each}
 			</ul>
 		{/if}
-		<button
-			onclick={handleClick}
+		<a
+			href={kit.link}
 			onmouseenter={() => (isHovered = true)}
 			onmouseleave={() => (isHovered = false)}
-			class="mt-8 w-full {buttonClass} py-4 rounded-2xl transition font-medium"
+			class="mt-8 w-full  py-4 rounded-2xl transition font-medium"
 		>
-			{buttonText}
-		</button>
+			{kit.buttonText}
+		</a>
 	</div>
 </div>

@@ -1,11 +1,10 @@
 <script lang="ts">
   import KitCard from "$lib/KitCard.svelte";
   import type { PageProps } from "./$types";
-  import { ls } from "$lib/localStorage.svelte";
-
+  
   let { data }: PageProps = $props();
   // svelte-ignore state_referenced_locally
-  let { business, preconfiguredKits, components, outdoorPackages } = data;
+  let { business, kits, components, outdoorPackages } = data;
 </script>
 
 <svelte:head>
@@ -40,8 +39,8 @@
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
-      {#each preconfiguredKits as kit, i}
-        <KitCard {kit} selected={ls.selectedKit} {i} />
+      {#each kits as kit, i}
+        <KitCard {kit} {i} />
       {/each}
     </div>
   </section>
