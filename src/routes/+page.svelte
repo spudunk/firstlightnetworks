@@ -106,7 +106,7 @@
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-zinc-900 p-8 rounded-3xl">
           <div class="text-5xl mb-6"><Clock /></div>
-          <h3 class="text-2xl font-semibold mb-3 text-emerald-200">
+          <h3 class="text-2xl font-semibold mb-3 text-blue-200">
             Save Installation Time
           </h3>
           <p class="text-zinc-400">
@@ -116,7 +116,7 @@
         </div>
         <div class="bg-zinc-900 p-8 rounded-3xl">
           <div class="text-5xl mb-6"><Home /></div>
-          <h3 class="text-2xl font-semibold mb-3 text-emerald-200">
+          <h3 class="text-2xl font-semibold mb-3 text-blue-200">
             Impress Homeowners
           </h3>
           <p class="text-zinc-400">
@@ -126,7 +126,7 @@
         </div>
         <div class="bg-zinc-900 p-8 rounded-3xl">
           <div class="text-5xl mb-6"><Lead /></div>
-          <h3 class="text-2xl font-semibold mb-3 text-emerald-200">
+          <h3 class="text-2xl font-semibold mb-3 text-blue-200">
             Lead the Industry
           </h3>
           <p class="text-zinc-400">
