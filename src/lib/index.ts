@@ -3,13 +3,13 @@ import { features } from "process";
 // place files you want to import through the `$lib` alias in this folder.
 export const business = {
   name: "First Light Networks",
+  legalName: "First Light Networks, LLC",
   rating: { score: 5.0, count: 6, label: "customers" },
 };
 
 export const headerLinks = [
   { href: '/solutions', label: 'Solutions & Kits' },
   // { href: '/for-builders', label: 'For Builders' },
-  // { href: '/resources', label: 'Resources' },
   { href: '/how-it-works', label: 'How It Works' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/about', label: 'About' }

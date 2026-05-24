@@ -124,7 +124,7 @@
             Turn-key WiFi solutions for custom home builders and luxury estates.
           </p>
           <div class="mt-6 text-xs">
-            © 2026 {data.business.name}. All rights reserved.
+            © 2026 {data.business.legalName}. All rights reserved.
           </div>
         </div>
 
