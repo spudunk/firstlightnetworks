@@ -90,7 +90,7 @@
     >
       {#each data.trustItems as s}
         <div class="flex gap-1 items-center">
-          <Checked class="text-xl" />
+          <Checked class="text-xl text-emerald-300" />
           {s}
         </div>
       {/each}
@@ -107,7 +107,7 @@
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-zinc-900 p-8 rounded-3xl">
           <div class="text-5xl mb-6"><Clock /></div>
-          <h3 class="text-2xl font-semibold mb-3">Save Installation Time</h3>
+          <h3 class="text-2xl font-semibold mb-3 text-emerald-200">Save Installation Time</h3>
           <p class="text-zinc-400">
             Pre-configured kits arrive ready to plug in. Most installs take
             under 4 hours.
@@ -115,7 +115,7 @@
         </div>
         <div class="bg-zinc-900 p-8 rounded-3xl">
           <div class="text-5xl mb-6"><Home /></div>
-          <h3 class="text-2xl font-semibold mb-3">Impress Homeowners</h3>
+          <h3 class="text-2xl font-semibold mb-3 text-emerald-200">Impress Homeowners</h3>
           <p class="text-zinc-400">
             Reliable whole-home + outdoor coverage (patio, pool, garage) as a
             premium upsell.
@@ -123,7 +123,7 @@
         </div>
         <div class="bg-zinc-900 p-8 rounded-3xl">
           <div class="text-5xl mb-6"><Lead /></div>
-          <h3 class="text-2xl font-semibold mb-3">Lead the Industry</h3>
+          <h3 class="text-2xl font-semibold mb-3 text-emerald-200">Lead the Industry</h3>
           <p class="text-zinc-400">
             Built-in Wi-Fi is not common in custom home construction yet, but it
             will be.
