@@ -1,4 +1,3 @@
-import { features } from "process";
 
 // place files you want to import through the `$lib` alias in this folder.
 export const business = {
@@ -25,14 +24,6 @@ export const footerLinks = [
     ]
   },
   // {
-  // 	heading: 'Solutions',
-  // 	links: [
-  // 		{ href: '/solutions', label: 'Pre-Configured Kits' },
-  // 		{ href: '/solutions', label: 'Individual Components' },
-  // 		{ href: '/quote', label: 'Custom Quote' }
-  // 	]
-  // },
-  // {
   // 	heading: 'Resources',
   // 	links: [
   // 		{ href: '/resources', label: 'Learning Center' },
@@ -58,8 +49,6 @@ export const steps = [
   { number: '04', title: 'Installation', desc: 'Kits arrive labeled and ready. Your electrician or low-voltage team follows our simple plug-and-play guide. Average install: 3–5 hours.' },
   { number: '05', title: 'Support & Handover', desc: 'We provide remote go-live support. Homeowners receive a simple guide and we remain available for any future questions or optimizations.' }
 ];
-
-
 
 export const projects = [
   {
@@ -137,14 +126,15 @@ export const projects = [
   // },
 ];
 
-type Testimonial =   
-{
+type Testimonial =
+  {
     name: string,
     role: string,
     text: string,
     image: string,
     score: number,
   }
+
 export const testimonials: Testimonial[] = [
   // {
   //   name: "Mercer Mackey",
@@ -229,27 +219,12 @@ export const kits = [
       "2x 2.5Gb Wi-Fi 7 Outdoor Access Points",
       "Keystone Patch Panel",
       "Rackmount UPS",
-    ], 
+    ],
     buttonText: "Buy This Kit Now",
     link: "https://buy.stripe.com/8x25kF0Ne2QF6X0c2B7IY00"
   },
 ];
 
-export const preconfiguredKits = kits;
-
-export const outdoorPackages = [
-  { title: 'Pool & Patio', price: '$1,295', desc: '2 weatherproof APs + dedicated PoE' },
-  { title: 'Gardens & Grounds', price: '$895', desc: 'Mesh extenders for 1+ acres' },
-  { title: 'Dock & Waterfront', price: '$1,495', desc: 'Marine-grade units + long-range' }
-];
-
-export const components = [
-  { name: 'WiFi 6E Access Points', price: '$349', type: 'Indoor' },
-  { name: 'Outdoor Mesh AP', price: '$429', type: 'Outdoor' },
-  { name: '8-Port PoE Switch', price: '$189', type: 'Networking' },
-  { name: 'Cat6A Cabling Kit', price: '$95', type: 'Cabling' },
-  { name: 'PoE Injectors (pair)', price: '$59', type: 'Power' }
-];
 
 
 export const blogPosts = [
