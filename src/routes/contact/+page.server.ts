@@ -1,6 +1,6 @@
 import type { PageServerLoad } from "./$types";
 
-const contact = {
+const b64contact = {
   tel: btoa('(360) 827-2736'),
   telLink: btoa('tel:+13608272736'),
   email: btoa('chris@firstlightnetworks.com'),
@@ -8,8 +8,6 @@ const contact = {
 }
 
 export const load: PageServerLoad = async ({ params }) => {
-  return {
-    contact
-  };
+  return { contact: b64contact };
 
 }

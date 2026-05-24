@@ -1,4 +1,10 @@
 <script lang="ts">
+  import Checked from "virtual:icons/proicons/checkbox-checked";
+  import Clock from "virtual:icons/mdi/clock-outline";
+  import Home from "virtual:icons/mdi/home-outline";
+  import Lead from "virtual:icons/mdi/award";
+  
+  
   import StarRating from "$lib/StarRating.svelte";
   import type { PageProps } from "./$types";
 
@@ -41,13 +47,13 @@
 
           <div class="flex flex-wrap gap-4">
             <a
-              href="#quote"
+              href="/quote"
               class="bg-white text-black px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-zinc-200 transition"
             >
               Build Your Kit
             </a>
             <a
-              href="#solutions"
+              href="/portfolio"
               class="border border-zinc-700 hover:border-zinc-400 px-8 py-4 rounded-2xl font-semibold transition"
             >
               Portfolio
@@ -72,7 +78,6 @@
             alt="Luxury home with full WiFi coverage"
             class=""
           />
-         
         </div>
       </div>
     </div>
@@ -83,11 +88,12 @@
     <div
       class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-x-12 gap-y-6 text-zinc-400 text-sm"
     >
-      <div>✅ Structured wiring plans for new construction</div>
-      <div>✅ Full indoor + outdoor coverage</div>
-      <div>✅ Pre-configured & tested kits</div>
-      <div>✅ 3-year warranty</div>
-      <div>✅ Builder volume pricing</div>
+      {#each data.trustItems as s}
+        <div class="flex gap-1 items-center">
+          <Checked class="text-xl" />
+          {s}
+        </div>
+      {/each}
     </div>
   </div>
 
@@ -100,7 +106,7 @@
 
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-zinc-900 p-8 rounded-3xl">
-          <div class="text-5xl mb-6">⏱️</div>
+          <div class="text-5xl mb-6"><Clock /></div>
           <h3 class="text-2xl font-semibold mb-3">Save Installation Time</h3>
           <p class="text-zinc-400">
             Pre-configured kits arrive ready to plug in. Most installs take
@@ -108,7 +114,7 @@
           </p>
         </div>
         <div class="bg-zinc-900 p-8 rounded-3xl">
-          <div class="text-5xl mb-6">🏠</div>
+          <div class="text-5xl mb-6"><Home /></div>
           <h3 class="text-2xl font-semibold mb-3">Impress Homeowners</h3>
           <p class="text-zinc-400">
             Reliable whole-home + outdoor coverage (patio, pool, garage) as a
@@ -116,10 +122,11 @@
           </p>
         </div>
         <div class="bg-zinc-900 p-8 rounded-3xl">
-          <div class="text-5xl mb-6">🥇</div>
+          <div class="text-5xl mb-6"><Lead /></div>
           <h3 class="text-2xl font-semibold mb-3">Lead the Industry</h3>
           <p class="text-zinc-400">
-            Built-in Wi-Fi is not common in custom home construction yet, but it will be.
+            Built-in Wi-Fi is not common in custom home construction yet, but it
+            will be.
           </p>
         </div>
       </div>

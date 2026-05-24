@@ -43,12 +43,13 @@ export const footerLinks = [
   {
     heading: 'Legal',
     links: [
-      { href: '', label: 'Privacy Policy' },
-      { href: '', label: 'Terms of Service' }
+      { href: '/privacy', label: 'Privacy Policy' },
+      { href: '/terms', label: 'Terms of Service' }
     ]
   }
 ]
 
+export const trustItems = ["Structured Wiring Plans", "Full indoor + outdoor coverage", "Pre-configured & tested kits", "3-year warranty", "Builder volume pricing"];
 
 export const steps = [
   { number: '01', title: 'Consultation', desc: 'Share your building plans and requirements. We review and send a detailed proposal with coverage maps, hardware list, and pricing within 3 days.' },

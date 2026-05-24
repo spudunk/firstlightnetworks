@@ -1,5 +1,9 @@
 <script lang="ts">
+  import Phone from "virtual:icons/proicons/phone";
+  import Mail from "virtual:icons/proicons/mail";
+  import Location from "virtual:icons/proicons/location";
   import type { PageProps } from "./$types";
+
   let { data }: PageProps = $props();
 
   let formData = $state({
@@ -34,6 +38,39 @@
       };
     }, 800);
   }
+
+  type Contact = {
+    tel: string;
+    telLink: string;
+    email: string;
+    emailLink: string;
+  };
+
+  async function decipher(b64contact: Contact): Promise<Contact> {
+    return new Promise((fulfil) => {
+      setTimeout(() => {
+        const c: Contact = {
+          tel: atob(b64contact.tel),
+          telLink: atob(b64contact.telLink),
+          email: atob(b64contact.email),
+          emailLink: atob(b64contact.emailLink),
+        };
+        fulfil(c);
+      }, 5000);
+    });
+  }
+
+  let counter: number = $state(5);
+  let waitMessage = $derived("Please wait " + counter + " seconds, human.");
+  let interval = setInterval(() => {
+    counter--;
+    if (counter <= 0) {
+      clearInterval(interval);
+    }
+  }, 1000);
+
+  // svelte-ignore state_referenced_locally
+  const promise: Promise<Contact> = decipher(data.contact);
 </script>
 
 <svelte:head>
@@ -50,29 +87,38 @@
         Tell us about your project and we'll design a custom solution with
         pricing within 24 hours.
       </p>
-			<p class="mt-6 text-xl text-blue-400 my-6">
-        Forms coming soon, please call or email for custom pricing or questions. 
+      <p class="mt-6 text-xl text-blue-400 my-6">
+        Please call, text, or email for custom pricing and questions.
       </p>
 
       <div class="mt-10 space-y-4 text">
-          <a href={atob(data.contact.telLink)} class="flex items-center gap-3"
-            ><span class="text-blue-500">📞</span> {atob(data.contact.tel)}</a
+        {#await promise}
+          <span class="flex items-center gap-3"
+            ><span class="text-blue-200"><Phone /></span> {waitMessage}</span
           >
-          <a href={atob(data.contact.emailLink)} class="flex items-center gap-3"
-            ><span class="text-blue-500">✉️</span> {atob(data.contact.email)}</a
+          <span class="flex items-center gap-3"
+            ><span class="text-blue-200"><Mail /></span> {waitMessage}</span
           >
+        {:then contact}
+          <a href={contact.telLink} class="flex items-center gap-3"
+            ><span class="text-blue-200"><Phone /></span> {contact.tel}</a
+          >
+          <a href={contact.emailLink} class="flex items-center gap-3"
+            ><span class="text-blue-200"><Mail /></span> {contact.email}</a
+          >
+        {/await}
         <div class="flex items-center gap-3">
-          <span class="text-blue-500">📍</span> Serving builders nationwide
+          <span class="text-blue-200"><Location /></span> Serving builders nationwide
         </div>
       </div>
 
       <!-- <div class="mt-8 text-sm text-zinc-500">Prefer a call? <a href="#" class="text-blue-400 hover:underline">Schedule a 15-min discovery call →</a></div> -->
     </div>
 
-    <div class="md:col-span-2">
+    <div class="md:col-span-2 hidden">
       {#if !submitted}
         <form
-					inert
+          inert
           onsubmit={handleSubmit}
           class="space-y-5 bg-zinc-900 p-8 rounded-3xl"
         >
@@ -99,7 +145,6 @@
             />
           </div>
 
-        
           <textarea
             bind:value={formData.details}
             placeholder="Message"

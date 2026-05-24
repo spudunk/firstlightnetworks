@@ -45,7 +45,7 @@
 
   <!-- Video / Demo placeholder -->
   <div
-    class="mt-20 bg-zinc-900 rounded-3xl p-12 text-center border border-zinc-800"
+    class="mt-20 bg-zinc-900 rounded-3xl p-12 text-center border border-zinc-800 hidden"
   >
     <div
       class="mx-auto w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center mb-6"

@@ -19,17 +19,17 @@
     class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur-md z-50 border-b border-zinc-800"
   >
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3">
+      <a href="/" class="flex items-center gap-3" onclick={() => (mobileOpen = false)}>
         <div
           class="w-14 rounded-xl flex items-center justify-center text-xl fill-white font-bold"
         >
           <Logo />
         </div>
         <div>
-          <h1 class="text-lg sm:text-2xl font-semibold tracking-tight">
+          <h1 class="text-sm xs:text-md sm:text-2xl font-semibold tracking-tight">
             {data.business.name}
           </h1>
-          <p class="text-xs text-zinc-400 -mt-1">WiFi for Custom Homes</p>
+          <p class="text-xs text-zinc-400 -mt-1 hidden sm:block">WiFi for Custom Homes</p>
         </div>
       </a>
 
@@ -52,7 +52,7 @@
 
         <a
           href="/quote"
-          class="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-2xl text-sm font-semibold transition"
+          class="bg-blue-600 hover:bg-blue-500 px-2 py-3 rounded-2xl text-sm font-semibold transition text-nowrap"
         >
           Get Quote
         </a>
@@ -88,13 +88,14 @@
         transition:slide={{ duration: 150 }}
       >
         {#each data.headerLinks as link}
-          <a href={link.href} class="py-1">{link.label}</a>
+          <a href={link.href} class="py-1" onclick={() => (mobileOpen = false)}>{link.label}</a>
         {/each}
-        <a href="/contact" class="py-1">Contact</a>
+        <a href="/contact" class="py-1" onclick={() => (mobileOpen = false)}>Contact</a>
 
         <a
           href="/quote"
           class="mt-2 bg-blue-600 text-center py-3 rounded-2xl font-semibold"
+          onclick={() => (mobileOpen = false)}
           >Get Quote</a
         >
       </div>
