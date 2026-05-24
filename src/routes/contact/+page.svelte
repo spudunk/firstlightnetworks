@@ -61,7 +61,7 @@
   }
 
   let counter: number = $state(5);
-  let waitMessage = $derived("Please wait " + counter + " seconds, human.");
+  let waitMessage = $derived("" + counter + " seconds, human");
   let interval = setInterval(() => {
     counter--;
     if (counter <= 0) {
@@ -94,10 +94,10 @@
       <div class="mt-10 space-y-4 text">
         {#await promise}
           <span class="flex items-center gap-3"
-            ><span class="text-blue-200"><Phone /></span> {waitMessage}</span
+            ><span class="text-blue-200"><Phone /></span>Phone in {waitMessage}</span
           >
           <span class="flex items-center gap-3"
-            ><span class="text-blue-200"><Mail /></span> {waitMessage}</span
+            ><span class="text-blue-200"><Mail /></span>Email in {waitMessage}</span
           >
         {:then contact}
           <a href={contact.telLink} class="flex items-center gap-3"
@@ -108,7 +108,7 @@
           >
         {/await}
         <div class="flex items-center gap-3">
-          <span class="text-blue-200"><Location /></span> Serving builders nationwide
+          <span class="text-blue-200"><Location /></span> Based in Burke County, NC. Serving builders nationwide
         </div>
       </div>
 
