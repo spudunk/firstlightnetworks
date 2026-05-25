@@ -1,5 +1,5 @@
 
-// place files you want to import through the `$lib` alias in this folder.
+
 export const business = {
   name: "First Light Networks",
   legalName: "First Light Networks, LLC",
@@ -113,17 +113,18 @@ export const projects = [
     ],
     result: 'Wired backbone to every building • Indoor + immediate outdoor coverage • Simple, reliable'
   },
-  // {
-  //   type: 'Rural Residential',
-  //   title: 'Custom Log Cabin with Shop',
-  //   subtitle: 'New construction + outbuildings',
-  //   excerpt: [
-  //     'This customer was building a new log cabin on their property, which already had an outbuilding and a large metal shop pole building. They already had Starlink set up at the outbuilding, but the Wi-Fi wasn’t reaching the shop or the new cabin. The area has poor cellular service, so they were often disconnected.',
-  //     'The customer had already done landscaping around all three buildings when we were brought in, so trenching fiber or conduit between the buildings was not allowed. We installed an outdoor Wi-Fi mesh system using 6 GHz 80 MHz wide mesh backhaul to link the buildings and share the WAN from the outbuilding to the other two. This choice leaves the 2.4 GHz and 5 GHz channels open for device connections, and the clear line of sight between buildings allows the 6 GHz channels to reach without issue.',
-  //     'Indoor access points were installed in both buildings to complete Wi-Fi coverage.'
-  //   ],
-  //   result: '6 GHz 80 MHz mesh links buildings • 2.4/5 GHz free for clients • Full indoor coverage'
-  // },
+  {
+    type: 'Future - Rural Residential',
+    title: 'Custom Log Cabin with Shop',
+    subtitle: 'New construction + outbuildings',
+    excerpt: [
+      'This customer built a new log cabin on their property near an existing outbuilding and large metal shop. They already have Starlink set up at the outbuilding, but the Wi-Fi isn\'t reaching the shop or the new cabin. The area has poor cellular service, so they are often disconnected.',
+      'The customer has already done landscaping around all three buildings, so trenching fiber or conduit between the buildings is not allowed. We designed an outdoor Wi-Fi mesh system dedicating the 6 GHz radio for an 80 MHz wide mesh backhaul to share the WAN from the outbuilding to the other two buildings. This choice leaves the 2.4 GHz and 5 GHz channels open for device connections. The 6GHz mesh creates a reliable >1Gbps backhaul with good stability due to clear line of sight.',
+      'Indoor access points installed in the cabin and shop will complete Wi-Fi coverage.',
+      // 'We don\'t deploy 6GHz Wi-Fi in most cases. It offers very fast speeds at short range with clear line of sight. It will be more useful in the future when VR headesets and robots use multi-gigabit connections, but right now, it\s great for outdoor mesh deployments. Clear line-of-sight between elevated outdoor access points is the only practical use today.' 
+    ],
+    result: '6 GHz 80 MHz mesh links buildings • 2.4/5 GHz free for clients • Full indoor coverage • No trenching'
+  },
 ];
 
 type Testimonial =
