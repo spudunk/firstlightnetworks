@@ -72,10 +72,11 @@
 
         <!-- Hero Image -->
         <div class="relative">
+          <div class="absolute -inset-20 bg-blue-600/20 rounded-full blur-3xl"></div>
           <img
             src="/barn.svg"
             alt="Luxury home with full WiFi coverage"
-            class="w-full max-w-xl md:max-w-2xl"
+            class="w-full max-w-xl md:max-w-2xl relative z-10"
           />
         </div>
       </div>
