@@ -93,21 +93,21 @@
 
       <div class="mt-10 space-y-4 text">
         {#await promise}
-          <span class="flex items-center gap-3"
+          <span class="flex items-center gap-1 py-2"
             ><span class="text-blue-200"><Phone /></span>Phone in {waitMessage}</span
           >
-          <span class="flex items-center gap-3"
+          <span class="flex items-center gap-1 py-2"
             ><span class="text-blue-200"><Mail /></span>Email in {waitMessage}</span
           >
         {:then contact}
-          <a href={contact.telLink} class="flex items-center gap-3"
+          <a href={contact.telLink} class="flex items-center gap-1 py-2"
             ><span class="text-blue-200"><Phone /></span> {contact.tel}</a
           >
-          <a href={contact.emailLink} class="flex items-center gap-3"
+          <a href={contact.emailLink} class="flex items-center gap-1 py-2"
             ><span class="text-blue-200"><Mail /></span> {contact.email}</a
           >
         {/await}
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-1 py-2">
           <span class="text-blue-200"><Location /></span> Based in Burke County, NC. Serving builders nationwide
         </div>
       </div>
