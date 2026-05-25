@@ -21,7 +21,7 @@
     class="pt-8 sm:pt-16 md:pt-24 pb-20 bg-linear-to-br from-zinc-900 via-zinc-950 to-black"
   >
     <div class="max-w-7xl mx-auto px-6 pt-16">
-      <div class="grid md:grid-cols-2 gap-2 items-center">
+      <div class="grid gap-24 md:grid-cols-2 md:gap-2 items-center">
         <div class="space-y-8">
           <div
             class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 rounded-full px-4 py-2 text-sm"
@@ -75,7 +75,7 @@
           <img
             src="/barn.svg"
             alt="Luxury home with full WiFi coverage"
-            class=""
+            class="w-full max-w-xl md:max-w-2xl"
           />
         </div>
       </div>
