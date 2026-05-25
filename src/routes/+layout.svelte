@@ -29,7 +29,7 @@
           <h1 class="text-sm xs:text-md sm:text-2xl font-semibold tracking-tight">
             {data.business.name}
           </h1>
-          <p class="text-xs text-zinc-400 -mt-1 hidden sm:block">WiFi for Custom Homes</p>
+          <p class="text-xs text-zinc-400 -mt-1 hidden sm:block">WiFi for Custom Home Builders</p>
         </div>
       </a>
 
