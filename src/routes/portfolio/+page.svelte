@@ -35,9 +35,9 @@
             </div>
           </div>
 
-          <h3 class="text-3xl font-semibold mt-3 tracking-tight">
+          <h2 class="text-3xl font-semibold mt-3 tracking-tight">
             {project.title}
-          </h3>
+          </h2>
           <div class="mt-1 text-lg text-zinc-400">{project.subtitle}</div>
 
           <div

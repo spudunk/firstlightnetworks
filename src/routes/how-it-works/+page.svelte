@@ -71,7 +71,7 @@
     >
   </div>
 
-  <div class="text-center mt-12 text-sm text-zinc-500">
+  <div class="text-center mt-12 text-sm text-zinc-300">
     Most builders complete their first install in under 4 hours after watching
     the demo once.
   </div>
