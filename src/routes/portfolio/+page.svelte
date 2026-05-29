@@ -1,10 +1,34 @@
-<script>
+<script lang="ts">
   let { data } = $props();
+
+  const portfolioSchema = $derived({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "First Light Networks Project Portfolio",
+    description: "Real-world WiFi installations for luxury homes, estates, and custom construction projects.",
+    itemListElement: data.projects.map((project: any, index: number) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "CreativeWork",
+        name: project.title,
+        description: project.excerpt.join(" "),
+        about: {
+          "@type": "Thing",
+          name: project.type,
+        },
+        result: project.result,
+      },
+    })),
+  });
 </script>
 
 <svelte:head>
-  <title>Portfolio & Case Studies • First Light Networks</title>
-  <meta name="description" content="Explore real installations by First Light Networks. See how we deliver exceptional WiFi coverage to luxury homes, backyards, and new construction developments.">
+  <title>Real WiFi Projects & Case Studies • First Light Networks</title>
+  <meta name="description" content="View real-world WiFi installations by First Light Networks. See exceptional coverage solutions for luxury homes, estates, and custom construction projects across the country.">
+  <script type="application/ld+json">
+    {@html JSON.stringify(portfolioSchema)}
+  </script>
 </svelte:head>
 
 <main class="max-w-7xl mx-auto px-6 py-16">

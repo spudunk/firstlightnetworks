@@ -7,10 +7,48 @@
 
   let { data, children }: LayoutProps = $props();
   let mobileOpen = $state(false);
+
+  const organizationSchema = $derived({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: data.business.name,
+    legalName: data.business.legalName,
+    url: "https://firstlightnetworks.com",
+    description:
+      "First Light Networks provides turnkey WiFi solutions for custom home builders. Reliable indoor and outdoor coverage with fast professional installation across the US.",
+    areaServed: "United States",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: data.business.rating.score,
+      reviewCount: data.business.rating.count,
+    },
+    knowsAbout: ["WiFi", "Home Networking", "Custom Home Construction", "Pre-configured Network Kits"],
+    serviceType: "Wireless Network Installation Services",
+  });
+
+  const websiteSchema = $derived({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: data.business.name,
+    url: "https://firstlightnetworks.com",
+    description:
+      "Turn-key WiFi solutions for custom home builders and luxury estates.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://firstlightnetworks.com/quote?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  });
 </script>
 
 <svelte:head>
   <link rel="icon" href={favicon} />
+  <script type="application/ld+json">
+    {@html JSON.stringify(organizationSchema)}
+  </script>
+  <script type="application/ld+json">
+    {@html JSON.stringify(websiteSchema)}
+  </script>
 </svelte:head>
 
 <div class="min-h-screen bg-zinc-950 text-white">

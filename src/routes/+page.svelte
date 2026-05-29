@@ -12,10 +12,10 @@
 </script>
 
 <svelte:head>
-  <title>Home • {data.business.name}</title>
+  <title>Premium WiFi for Custom Home Builders • First Light Networks</title>
   <meta
     name="description"
-    content="Premium pre-configured WiFi systems for home builders. First Light Networks delivers reliable indoor + outdoor coverage with fast installation and exceptional performance."
+    content="First Light Networks provides turnkey WiFi solutions for custom home builders. Reliable indoor and outdoor coverage with fast professional installation across the US."
   />
 </svelte:head>
 

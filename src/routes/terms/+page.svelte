@@ -5,8 +5,8 @@
 </script>
 
 <svelte:head>
-  <title>Terms of Service • {data.business.name}</title>
-  <meta name="description" content="First Light Networks Terms of Service. Read our policies on website use, product purchases, shipping, warranty, and builder program terms.">
+  <title>Official Terms of Service • First Light Networks</title>
+  <meta name="description" content="Review the First Light Networks terms of service covering website use, product purchases, shipping, warranties, and our builder partnership program details.">
 </svelte:head>
 
 <main class="max-w-prose mx-auto px-6 py-16">

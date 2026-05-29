@@ -5,8 +5,8 @@ let { data }: PageProps = $props();
 </script>
 
 <svelte:head>
-	<title>About Us • {data.business.name}</title>
-	<meta name="description" content="First Light Networks specializes in high-performance WiFi solutions for new construction. Helping builders deliver reliable connectivity with minimal effort.">
+	<title>About First Light Networks • Premium Builder WiFi</title>
+	<meta name="description" content="First Light Networks delivers pre-configured WiFi systems for custom builders. Learn about our turnkey approach to reliable home networking with fast installation.">
 </svelte:head>
 
 <main class="max-w-5xl mx-auto px-6 py-16">

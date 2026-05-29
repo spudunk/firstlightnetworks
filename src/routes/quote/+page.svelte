@@ -81,10 +81,10 @@
 </script>
 
 <svelte:head>
-  <title>Get a Custom WiFi Kit Quote | First Light Networks</title>
+  <title>Request a Custom WiFi Quote • First Light Networks</title>
   <meta
     name="description"
-    content="Request a custom quote for your next project. Get tailored WiFi kit pricing and recommendations from First Light Networks. Fast quotes for home builders."
+    content="Request a personalized quote for premium WiFi kits designed for custom homes. First Light Networks offers fast quotes and builder-focused recommendations nationwide."
   />
 </svelte:head>
 

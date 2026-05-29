@@ -14,7 +14,8 @@
 </script>
 
 <svelte:head>
-	<title>For Builders & Contractors • First Light Networks</title>
+	<title>Builder WiFi Solutions & Resources • First Light Networks</title>
+	<meta name="description" content="Partner with First Light Networks for premium WiFi kits built for builders. Access specs, CAD details, volume pricing, and tools to win more custom home projects." />
 </svelte:head>
 
 <main class="max-w-7xl mx-auto px-6 py-16">

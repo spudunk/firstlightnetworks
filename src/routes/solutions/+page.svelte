@@ -5,11 +5,44 @@
   let { data }: PageProps = $props();
   // svelte-ignore state_referenced_locally
   let { business, kits } = data;
+
+  const solutionsSchema = $derived({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Pre-Configured WiFi Kits for Custom Homes",
+    description:
+      "Professional indoor, outdoor, and whole-home WiFi systems designed for builders. Pre-configured kits that save time and deliver powerful coverage.",
+    provider: {
+      "@type": "Organization",
+      name: business.name,
+      url: "https://firstlightnetworks.com",
+    },
+    areaServed: "United States",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "WiFi Kits",
+      itemListElement: kits.map((kit: any, index: number) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Product",
+          name: kit.title,
+          description: kit.subtitle,
+        },
+        position: index + 1,
+        price: kit.price === "Custom Pricing" ? null : kit.price.replace("$", ""),
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+      })),
+    },
+  });
 </script>
 
 <svelte:head>
-  <title>Solutions & Kits • {business.name}</title>
-  <meta name="description" content="Professional WiFi solutions for new homes. Indoor, outdoor, and whole-home systems designed for builders. Pre-configured kits that save time and deliver powerful coverage.">
+  <title>Custom Home WiFi Kits & Solutions • First Light Networks</title>
+  <meta name="description" content="Explore professional WiFi solutions and pre-configured kits for custom homes. Indoor, outdoor, and whole-home systems that save builders time and ensure reliable coverage.">
+  <script type="application/ld+json">
+    {@html JSON.stringify(solutionsSchema)}
+  </script>
 </svelte:head>
 
 <main class="max-w-7xl mx-auto px-6 py-16">

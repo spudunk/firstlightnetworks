@@ -5,8 +5,8 @@
 </script>
 
 <svelte:head>
-  <title>Privacy Policy • {data.business.name}</title>
-  <meta name="description" content="First Light Networks Privacy Policy. Learn how we collect, use, and protect your personal information when visiting our site or purchasing WiFi solutions.">
+  <title>Privacy Policy • First Light Networks WiFi</title>
+  <meta name="description" content="Read the First Light Networks privacy policy to understand how we collect, use, and protect your personal data when using our website and WiFi services.">
 </svelte:head>
 
 <main class="max-w-prose mx-auto px-6 py-16">

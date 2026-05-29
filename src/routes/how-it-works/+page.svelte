@@ -2,14 +2,32 @@
   import type { PageProps } from "./$types";
 
   let { data }: PageProps = $props();
+
+  const howToSchema = $derived({
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How First Light Networks Delivers Turnkey WiFi for Custom Homes",
+    description:
+      "A simple 5-step process to get reliable, pre-configured indoor and outdoor WiFi installed in new construction homes.",
+    totalTime: "P3DT5H",
+    step: data.steps.map((step: any, index: number) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.title,
+      text: step.desc,
+    })),
+  });
 </script>
 
 <svelte:head>
-  <title>How It Works • First Light Networks</title>
+  <title>How Our WiFi Process Works • First Light Networks</title>
   <meta
     name="description"
-    content="Learn how First Light Networks simplifies WiFi for builders. Pre-configured kits, easy installation, and flawless performance for new construction projects."
+    content="Discover the simple 5-step process First Light Networks uses to deliver reliable, pre-configured WiFi systems for custom home builders with professional results."
   />
+  <script type="application/ld+json">
+    {@html JSON.stringify(howToSchema)}
+  </script>
 </svelte:head>
 
 <main class="max-w-5xl mx-auto px-6 py-16">
