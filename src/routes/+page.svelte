@@ -22,7 +22,7 @@
 <main class="min-h-screen bg-zinc-950 text-white">
   <!-- Hero -->
   <section
-    class="pt-8 sm:pt-16 md:pt-24 pb-20 bg-linear-to-br from-zinc-900 via-zinc-950 to-black"
+    class="pt-8 sm:pt-16 md:pt-24 pb-20 bg-linear-to-br from-zinc-900 via-zinc-950 to-black overflow-hidden"
   >
     <div class="max-w-7xl mx-auto px-6 pt-16">
       <div class="grid gap-24 md:grid-cols-2 md:gap-2 items-center">
@@ -75,7 +75,7 @@
         </div>
 
         <!-- Hero Image -->
-        <div class="relative">
+        <div class="relative ">
           <div
             class="absolute -inset-20 bg-blue-600/20 rounded-full blur-3xl"
           ></div>
