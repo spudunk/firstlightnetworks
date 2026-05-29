@@ -4,8 +4,6 @@
 </script>
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  width="3181"
-  height="1950"
   viewBox="0 0 3181 1950"
   class={className}
   ><path
