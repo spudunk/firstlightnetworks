@@ -17,7 +17,7 @@
 	<title>For Builders & Contractors • First Light Networks</title>
 </svelte:head>
 
-<div class="max-w-7xl mx-auto px-6 py-16">
+<main class="max-w-7xl mx-auto px-6 py-16">
 	<div class="max-w-3xl">
 		<div class="uppercase text-blue-500 tracking-[3px] text-sm">PARTNER WITH US</div>
 		<h1 class="text-6xl font-bold tracking-tighter mt-3">WiFi that helps you win more projects.</h1>
@@ -75,4 +75,4 @@
 		</div>
 		<p class="text-center text-sm mt-8 text-zinc-500">All resources are available immediately after you request a quote or sign up for the partner portal.</p>
 	</div>
-</div>
+</main>

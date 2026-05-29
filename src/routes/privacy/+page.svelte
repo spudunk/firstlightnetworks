@@ -6,9 +6,10 @@
 
 <svelte:head>
   <title>Privacy Policy • {data.business.name}</title>
+  <meta name="description" content="First Light Networks Privacy Policy. Learn how we collect, use, and protect your personal information when visiting our site or purchasing WiFi solutions.">
 </svelte:head>
 
-<div class="max-w-prose mx-auto px-6 py-16">
+<main class="max-w-prose mx-auto px-6 py-16">
   <div class="uppercase tracking-[3px] text-blue-500 text-sm font-medium mb-3">LEGAL</div>
   <h1 class="text-6xl font-bold tracking-tighter mb-4">Privacy Policy</h1>
   <p class="text-xl text-zinc-400">Last updated: May 24, 2026</p>
@@ -67,4 +68,4 @@
       If you have any questions about this Privacy Policy, please contact us at <a href="/contact" class="text-blue-400 hover:underline">our contact page</a> or email us directly.
     </p>
   </div>
-</div>
+</main>

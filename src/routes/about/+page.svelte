@@ -6,9 +6,10 @@ let { data }: PageProps = $props();
 
 <svelte:head>
 	<title>About Us • {data.business.name}</title>
+	<meta name="description" content="First Light Networks specializes in high-performance WiFi solutions for new construction. Helping builders deliver reliable connectivity with minimal effort.">
 </svelte:head>
 
-<div class="max-w-5xl mx-auto px-6 py-16">
+<main class="max-w-5xl mx-auto px-6 py-16">
 	<div class="max-w-3xl">
 		<div class="uppercase tracking-[3px] text-blue-500 text-sm font-medium mb-3">ABOUT FIRST LIGHT NETWORKS</div>
 		<h1 class="text-6xl font-bold tracking-tighter">Reliable, high-performance networks that just work.</h1>
@@ -86,4 +87,4 @@ let { data }: PageProps = $props();
 		
 		<a href="/contact" class="mt-8 inline-block bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-zinc-200 transition">Contact us today to discuss your project</a>
 	</div>
-</div>
+</main>

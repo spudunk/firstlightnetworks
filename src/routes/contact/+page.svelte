@@ -75,9 +75,10 @@
 
 <svelte:head>
   <title>Contact & Get Quote • First Light Networks</title>
+  <meta name="description" content="Contact First Light Networks for expert WiFi advice, custom kit recommendations, and builder support. Get the perfect solution for your next construction project.">
 </svelte:head>
 
-<div class="max-w-4xl mx-auto px-6 py-16">
+<main class="max-w-4xl mx-auto px-6 py-16">
   <div class="flex flex-col gap-4">
     <h1 class="text-6xl font-bold tracking-tighter">
       Let's build your modern network.
@@ -180,4 +181,4 @@
       </div>
     </div>
   </div>
-</div>
+</main>

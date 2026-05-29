@@ -4,14 +4,15 @@
   
   let { data }: PageProps = $props();
   // svelte-ignore state_referenced_locally
-  let { business, kits, components, outdoorPackages } = data;
+  let { business, kits } = data;
 </script>
 
 <svelte:head>
   <title>Solutions & Kits • {business.name}</title>
+  <meta name="description" content="Professional WiFi solutions for new homes. Indoor, outdoor, and whole-home systems designed for builders. Pre-configured kits that save time and deliver powerful coverage.">
 </svelte:head>
 
-<div class="max-w-7xl mx-auto px-6 py-16">
+<main class="max-w-7xl mx-auto px-6 py-16">
   <div class="max-w-4xl mb-16">
     <h1 class="text-6xl font-bold tracking-tighter">
       Solutions built for real homes.
@@ -53,123 +54,4 @@
     </div>
   </section>
 
-  {#if false}
-    <!-- Outdoor Living -->
-    <section class="mt-20">
-      <h2 class="text-4xl font-semibold mb-8">Outdoor Living Packages</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        {#each outdoorPackages as pkg}
-          <div
-            class="bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-zinc-700 transition"
-          >
-            <div class="text-3xl mb-4">🌊</div>
-            <h3 class="text-2xl font-semibold">{pkg.title}</h3>
-            <div class="text-3xl font-semibold mt-4">{pkg.price}</div>
-            <p class="mt-2 text-zinc-400">{pkg.desc}</p>
-            <button
-              class="mt-8 w-full bg-zinc-800 hover:bg-blue-600 py-4 rounded-2xl transition"
-              >Add to Kit</button
-            >
-          </div>
-        {/each}
-      </div>
-    </section>
-
-    <!-- Individual Components -->
-    <section class="mt-20">
-      <h2 class="text-4xl font-semibold mb-3">Individual Components</h2>
-      <p class="text-zinc-400 mb-8">
-        For custom builds or upgrades. All components are pre-tested before
-        shipping.
-      </p>
-
-      <div class="bg-zinc-900 rounded-3xl overflow-hidden">
-        <table class="w-full">
-          <thead
-            class="border-b border-zinc-800 text-left text-sm text-zinc-400"
-          >
-            <tr>
-              <th class="p-6 font-normal">Product</th>
-              <th class="p-6 font-normal">Category</th>
-              <th class="p-6 font-normal">Price</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-zinc-800 text-sm">
-            {#each components as item}
-              <tr class="hover:bg-zinc-950">
-                <td class="p-6 font-medium">{item.name}</td>
-                <td class="p-6 text-zinc-400">{item.type}</td>
-                <td class="p-6 font-semibold">{item.price}</td>
-                <td class="p-6 text-right"
-                  ><button class="text-blue-400 hover:underline">Add →</button
-                  ></td
-                >
-              </tr>
-            {/each}
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Kit Details Example -->
-    <section class="mt-24 bg-zinc-900 rounded-3xl p-12">
-      <div class="grid md:grid-cols-2 gap-12">
-        <div>
-          <h3 class="text-3xl font-semibold mb-6">
-            What's included in every kit
-          </h3>
-          <ul class="space-y-4 text-sm">
-            <li class="flex gap-3">
-              <span class="text-emerald-400 mt-0.5">✓</span> Hardware pre-mounted
-              on custom backplates
-            </li>
-            <li class="flex gap-3">
-              <span class="text-emerald-400 mt-0.5">✓</span> Full configuration &
-              firmware loaded
-            </li>
-            <li class="flex gap-3">
-              <span class="text-emerald-400 mt-0.5">✓</span> 48-hour burn-in testing
-              at our facility
-            </li>
-            <li class="flex gap-3">
-              <span class="text-emerald-400 mt-0.5">✓</span> Labeled cables and mounting
-              hardware
-            </li>
-            <li class="flex gap-3">
-              <span class="text-emerald-400 mt-0.5">✓</span> Installation guide +
-              video walkthrough
-            </li>
-            <li class="flex gap-3">
-              <span class="text-emerald-400 mt-0.5">✓</span> 3-year warranty + lifetime
-              remote support
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-semibold mb-4 text-lg">Estimated Install Time</h3>
-          <div class="text-6xl font-semibold tabular-nums tracking-tighter">
-            3–5 <span class="text-4xl font-normal text-zinc-400">hrs</span>
-          </div>
-          <p class="mt-3 text-zinc-400">
-            For a typical 2-story home. Your electrician or low-voltage team
-            handles rough-in and final placement. We provide remote go-live
-            support.
-          </p>
-
-          <div class="mt-8 pt-8 border-t border-zinc-700">
-            <div class="text-sm uppercase tracking-widest text-blue-500 mb-3">
-              COVERAGE VISUAL
-            </div>
-            <div
-              class="aspect-video bg-zinc-950 rounded-2xl flex items-center justify-center text-center text-sm text-zinc-500 border border-zinc-800"
-            >
-              Interactive coverage map coming soon.<br />Typical whole-home
-              signal strength: -45 dBm avg
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  {/if}
-</div>
+  </main>

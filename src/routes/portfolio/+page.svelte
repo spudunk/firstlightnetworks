@@ -4,9 +4,10 @@
 
 <svelte:head>
   <title>Portfolio & Case Studies • First Light Networks</title>
+  <meta name="description" content="Explore real installations by First Light Networks. See how we deliver exceptional WiFi coverage to luxury homes, backyards, and new construction developments.">
 </svelte:head>
 
-<div class="max-w-7xl mx-auto px-6 py-16">
+<main class="max-w-7xl mx-auto px-6 py-16">
   <h1 class="text-6xl font-bold tracking-tighter">
     Real results.<br />Real homes.
   </h1>
@@ -70,4 +71,4 @@
 		</div>
 	</div>
 	-->
-</div>
+</main>

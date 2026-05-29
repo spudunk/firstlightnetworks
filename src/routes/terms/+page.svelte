@@ -6,9 +6,10 @@
 
 <svelte:head>
   <title>Terms of Service • {data.business.name}</title>
+  <meta name="description" content="First Light Networks Terms of Service. Read our policies on website use, product purchases, shipping, warranty, and builder program terms.">
 </svelte:head>
 
-<div class="max-w-prose mx-auto px-6 py-16">
+<main class="max-w-prose mx-auto px-6 py-16">
   <div class="uppercase tracking-[3px] text-blue-500 text-sm font-medium mb-3">LEGAL</div>
   <h1 class="text-6xl font-bold tracking-tighter mb-4">Terms of Service</h1>
   <p class="text-xl text-zinc-400">Last updated: May 24, 2026</p>
@@ -67,4 +68,4 @@
       If you have any questions about these Terms, please reach out via our <a href="/contact" class="text-blue-400 hover:underline">contact page</a>.
     </p>
   </div>
-</div>
+</main>

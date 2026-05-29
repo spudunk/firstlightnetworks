@@ -13,9 +13,13 @@
 
 <svelte:head>
   <title>Home • {data.business.name}</title>
+  <meta
+    name="description"
+    content="Premium pre-configured WiFi systems for home builders. First Light Networks delivers reliable indoor + outdoor coverage with fast installation and exceptional performance."
+  />
 </svelte:head>
 
-<div class="min-h-screen bg-zinc-950 text-white">
+<main class="min-h-screen bg-zinc-950 text-white">
   <!-- Hero -->
   <section
     class="pt-8 sm:pt-16 md:pt-24 pb-20 bg-linear-to-br from-zinc-900 via-zinc-950 to-black"
@@ -72,7 +76,9 @@
 
         <!-- Hero Image -->
         <div class="relative">
-          <div class="absolute -inset-20 bg-blue-600/20 rounded-full blur-3xl"></div>
+          <div
+            class="absolute -inset-20 bg-blue-600/20 rounded-full blur-3xl"
+          ></div>
           <img
             src="/barn.svg"
             alt="Luxury home with full WiFi coverage"
@@ -186,4 +192,4 @@
       </p>
     </div>
   </section>
-</div>
+</main>

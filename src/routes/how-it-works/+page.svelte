@@ -2,14 +2,17 @@
   import type { PageProps } from "./$types";
 
   let { data }: PageProps = $props();
-
 </script>
 
 <svelte:head>
   <title>How It Works • First Light Networks</title>
+  <meta
+    name="description"
+    content="Learn how First Light Networks simplifies WiFi for builders. Pre-configured kits, easy installation, and flawless performance for new construction projects."
+  />
 </svelte:head>
 
-<div class="max-w-5xl mx-auto px-6 py-16">
+<main class="max-w-5xl mx-auto px-6 py-16">
   <div class="text-center max-w-2xl mx-auto">
     <h1 class="text-6xl font-bold tracking-tighter">
       Five simple steps.<br />Zero headaches.
@@ -72,4 +75,4 @@
     Most builders complete their first install in under 4 hours after watching
     the demo once.
   </div>
-</div>
+</main>
