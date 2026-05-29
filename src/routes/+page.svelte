@@ -6,9 +6,9 @@
 
   import StarRating from "$lib/StarRating.svelte";
   import type { PageProps } from "./$types";
+  import Barn from "$lib/Barn.svg.svelte";
 
   let { data }: PageProps = $props();
-  // let currentSlide = $state(0);
 </script>
 
 <svelte:head>
@@ -79,11 +79,7 @@
           <div
             class="absolute -inset-20 bg-blue-600/20 rounded-full blur-3xl"
           ></div>
-          <img
-            src="/barn.svg"
-            alt="Luxury home with full WiFi coverage"
-            class="w-full max-w-xl md:max-w-2xl relative z-10"
-          />
+          <Barn className="w-full h-full max-w-xl md:max-w-2xl relative z-10" />
         </div>
       </div>
     </div>
