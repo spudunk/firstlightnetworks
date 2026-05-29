@@ -132,7 +132,7 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-8">
           {#each data.footerLinks as section}
             <div>
-              <h4 class="font-semibold text-white mb-4">{section.heading}</h4>
+              <h3 class="font-semibold text-white mb-4">{section.heading}</h3>
               <div class="space-y-2">
                 {#each section.links as link}
                   <a href={link.href} class="block hover:text-white"
