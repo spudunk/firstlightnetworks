@@ -4,41 +4,14 @@
   import Logo from "$lib/Logo.svelte";
   import type { LayoutProps } from "./$types";
   import { slide } from "svelte/transition";
+  import { schemas } from "$lib";
+  import { business, headerLinks, footerLinks } from "$lib";
 
   let { data, children }: LayoutProps = $props();
   let mobileOpen = $state(false);
 
-  const organizationSchema = $derived({
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: data.business.name,
-    legalName: data.business.legalName,
-    url: "https://firstlightnetworks.com",
-    description:
-      "First Light Networks provides turnkey WiFi solutions for custom home builders. Reliable indoor and outdoor coverage with fast professional installation across the US.",
-    areaServed: "United States",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: data.business.rating.score,
-      reviewCount: data.business.rating.count,
-    },
-    knowsAbout: ["WiFi", "Home Networking", "Custom Home Construction", "Pre-configured Network Kits"],
-    serviceType: "Wireless Network Installation Services",
-  });
-
-  const websiteSchema = $derived({
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: data.business.name,
-    url: "https://firstlightnetworks.com",
-    description:
-      "Turn-key WiFi solutions for custom home builders and luxury estates.",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://firstlightnetworks.com/quote?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
-  });
+  const organizationSchema = $derived(schemas.org);
+  const websiteSchema = $derived(schemas.website);
 </script>
 
 <svelte:head>
@@ -65,15 +38,15 @@
         </div>
         <div>
           <span class="text-sm xs:text-md sm:text-2xl font-semibold tracking-tight">
-            {data.business.name}
+            {business.name}
           </span>
-          <p class="text-xs text-zinc-400 -mt-1 hidden sm:block">WiFi for Custom Home Builders</p>
+          <p class="text-xs text-zinc-400 -mt-1 hidden sm:block">WiFi Everywhere</p>
         </div>
       </a>
 
       <!-- Desktop Nav -->
       <div class="hidden lg:flex items-center gap-8 text-sm">
-        {#each data.headerLinks as link}
+        {#each headerLinks as link}
           <a href={link.href} class="hover:text-blue-400 transition"
             >{link.label}</a
           >
@@ -126,7 +99,7 @@
         class="lg:hidden border-t border-zinc-800 bg-zinc-950 px-6 py-6 flex flex-col gap-4 text-sm"
         transition:slide={{ duration: 150 }}
       >
-        {#each data.headerLinks as link}
+        {#each headerLinks as link}
           <a href={link.href} class="py-1" onclick={() => (mobileOpen = false)}>{link.label}</a>
         {/each}
         <a href="/contact" class="py-1" onclick={() => (mobileOpen = false)}>Contact</a>
@@ -157,18 +130,18 @@
             >
               <Logo />
             </div>
-            <span class="text-xl font-semibold">{data.business.name}</span>
+            <span class="text-xl font-semibold">{business.name}</span>
           </div>
           <p class="max-w-xs">
             Turn-key WiFi solutions for custom home builders and luxury estates.
           </p>
           <div class="mt-6 text-xs">
-            © 2026 {data.business.legalName}. All rights reserved.
+            © 2026 {business.legalName}. All rights reserved.
           </div>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-8">
-          {#each data.footerLinks as section}
+          {#each footerLinks as section}
             <div>
               <span class="font-semibold text-white mb-4">{section.heading}</span>
               <div class="space-y-2">

@@ -6,6 +6,39 @@ export const business = {
   rating: { score: 5.0, count: 6, label: "customers" },
 };
 
+export const schemas = {
+  org: {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: business.name,
+    legalName: business.legalName,
+    url: "https://firstlightnetworks.com",
+    description:
+      "First Light Networks provides turnkey WiFi solutions for custom home builders. Reliable indoor and outdoor coverage with fast professional installation across the US.",
+    areaServed: "United States",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: business.rating.score,
+      reviewCount: business.rating.count,
+    },
+    knowsAbout: ["WiFi", "Home Networking", "Custom Home Construction", "Pre-configured Network Kits"],
+    serviceType: "Wireless Network Installation Services",
+  },
+  website: {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: business.name,
+    url: "https://firstlightnetworks.com",
+    description:
+      "Turn-key WiFi solutions for custom home builders and luxury estates.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://firstlightnetworks.com/quote?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  }
+}
+
 export const headerLinks = [
   { href: '/solutions', label: 'Solutions & Kits' },
   // { href: '/for-builders', label: 'For Builders' },
