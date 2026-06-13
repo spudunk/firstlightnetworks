@@ -9,7 +9,7 @@
 		placeholder?: string;
 		rows?: number;
 	} = $props();
-
+	// svelte-ignore state_referenced_locally
 	const { value, errors, constraints } = formFieldProxy(form, field);
 </script>
 

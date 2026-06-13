@@ -9,6 +9,7 @@
 		options: { value: string; label: string }[];
 	} = $props();
 
+	// svelte-ignore state_referenced_locally
 	const { value, errors, constraints } = formFieldProxy(form, field);
 </script>
 

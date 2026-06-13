@@ -8,6 +8,7 @@
 		label?: string;
 	} = $props();
 
+	// svelte-ignore state_referenced_locally
 	const { value } = formFieldProxy(form, field);
 	let files: FileList | null = $state(null);
 
@@ -17,7 +18,7 @@
 </script>
 
 <div class="space-y-1.5">
-	<label class="block text-sm font-medium text-zinc-300">{label}</label>
+	<span class="block text-sm font-medium text-zinc-300">{label}</span>
 	<div class="rounded-xl border border-dashed border-zinc-700 bg-zinc-900 p-8 text-center">
 		<input
 			type="file"
