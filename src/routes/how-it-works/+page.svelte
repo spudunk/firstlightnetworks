@@ -1,22 +1,9 @@
 <script lang="ts">
-  import type { PageProps } from "./$types";
+  import { schemas, steps } from "$lib";
+  // import type { PageProps } from "./$types";
+  // let { data }: PageProps = $props();
 
-  let { data }: PageProps = $props();
-
-  const howToSchema = $derived({
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: "How First Light Networks Delivers Turnkey WiFi for Custom Homes",
-    description:
-      "A simple 5-step process to get reliable, pre-configured indoor and outdoor WiFi installed in new construction homes.",
-    totalTime: "P3DT5H",
-    step: data.steps.map((step: any, index: number) => ({
-      "@type": "HowToStep",
-      position: index + 1,
-      name: step.title,
-      text: step.desc,
-    })),
-  });
+  const howToSchema = $derived(schemas.howTo);
 </script>
 
 <svelte:head>
@@ -48,7 +35,7 @@
     ></div>
 
     <div class="space-y-12">
-      {#each data.steps as step, i}
+      {#each steps as step, i}
         <div class="md:flex gap-10 items-start">
           <div
             class="shrink-0 w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center text-3xl font-mono font-bold mb-4 md:mb-0"

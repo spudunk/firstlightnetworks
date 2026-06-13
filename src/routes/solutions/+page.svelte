@@ -1,10 +1,10 @@
 <script lang="ts">
   import KitCard from "$lib/KitCard.svelte";
-  import type { PageProps } from "./$types";
+  import { business, kits } from "$lib";
   
-  let { data }: PageProps = $props();
-  // svelte-ignore state_referenced_locally
-  let { business, kits } = data;
+  // import type { PageProps } from "./$types";
+  // let { data }: PageProps = $props();
+
 
   const solutionsSchema = $derived({
     "@context": "https://schema.org",

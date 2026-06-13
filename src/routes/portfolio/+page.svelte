@@ -1,26 +1,7 @@
 <script lang="ts">
-  let { data } = $props();
+  import { schemas, projects } from '$lib';
 
-  const portfolioSchema = $derived({
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "First Light Networks Project Portfolio",
-    description: "Real-world WiFi installations for luxury homes, estates, and custom construction projects.",
-    itemListElement: data.projects.map((project: any, index: number) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "CreativeWork",
-        name: project.title,
-        description: project.excerpt.join(" "),
-        about: {
-          "@type": "Thing",
-          name: project.type,
-        },
-        result: project.result,
-      },
-    })),
-  });
+  const portfolioSchema = $derived(schemas.portfolio);
 </script>
 
 <svelte:head>
@@ -41,7 +22,7 @@
   </p>
 
   <div class="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-6">
-    {#each data.projects as project}
+    {#each projects as project}
       <div
         class="group rounded-3xl bg-zinc-900 border border-zinc-800 overflow-hidden flex flex-col"
       >
