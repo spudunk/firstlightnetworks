@@ -5,10 +5,12 @@
   import Lead from "virtual:icons/mdi/award";
 
   import StarRating from "$lib/StarRating.svelte";
-  import type { PageProps } from "./$types";
   import Barn from "$lib/Barn.svg.svelte";
 
-  let { data }: PageProps = $props();
+  import { trustItems, testimonials, business } from "$lib";
+  
+  // import type { PageProps } from "./$types";
+  // let { data }: PageProps = $props();
 </script>
 
 <svelte:head>
@@ -65,9 +67,9 @@
 
           <div class="flex items-center gap-8 text-sm pt-4">
             <StarRating
-              score={data.business.rating.score}
-              count={data.business.rating.count}
-              label={data.business.rating.label}
+              score={business.rating.score}
+              count={business.rating.count}
+              label={business.rating.label}
             />
             <div class="h-4 w-px bg-zinc-700"></div>
             <div>15+ years networking expertise</div>
@@ -90,7 +92,7 @@
     <div
       class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-x-12 gap-y-6 text-zinc-400 text-sm"
     >
-      {#each data.trustItems as s}
+      {#each trustItems as s}
         <div class="flex gap-1 items-center">
           <Checked class="text-xl text-emerald-300" />
           {s}
@@ -103,7 +105,7 @@
   <section class="py-20 bg-zinc-950">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-center text-4xl font-semibold mb-12">
-        Why Builders Choose {data.business.name}
+        Why Builders Choose {business.name}
       </h2>
 
       <div class="grid md:grid-cols-3 gap-8">
@@ -142,7 +144,7 @@
   </section>
 
   <!-- Testimonials -->
-  {#if data.testimonials.length > 0}
+  {#if testimonials.length > 0}
     <section class="py-20 bg-zinc-900">
       <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-4xl font-semibold text-center mb-12">
@@ -150,7 +152,7 @@
         </h2>
 
         <div class="grid md:grid-cols-2 gap-8">
-          {#each data.testimonials as testimonial}
+          {#each testimonials as testimonial}
             <div class="bg-zinc-950 p-10 rounded-3xl">
               <p class="text-lg leading-relaxed">"{testimonial.text}"</p>
               <div class="flex items-center gap-4 mt-10">
