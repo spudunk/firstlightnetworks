@@ -1,9 +1,8 @@
 <script lang="ts">
-  import { schemas, steps } from "$lib";
+  import {  steps } from "$lib";
+  import { howToSchema } from "$lib/schemas";
   // import type { PageProps } from "./$types";
   // let { data }: PageProps = $props();
-
-  const howToSchema = $derived(schemas.howTo);
 </script>
 
 <svelte:head>

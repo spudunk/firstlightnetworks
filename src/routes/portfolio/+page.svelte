@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { schemas, projects } from '$lib';
+  import { projects } from '$lib';
+  import { portfolioSchema } from '$lib/schemas';
 
-  const portfolioSchema = $derived(schemas.portfolio);
 </script>
 
 <svelte:head>

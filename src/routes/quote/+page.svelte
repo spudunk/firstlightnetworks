@@ -1,7 +1,7 @@
 <script lang="ts">
   import { superForm } from "sveltekit-superforms";
   import { zodClient } from "sveltekit-superforms/adapters";
-  import { quoteSchema } from "./schema";
+  import { quoteSchema } from "$lib/schemas"; 
 
   import TextInput from "$lib/forms/TextInput.svelte";
   import Select from "$lib/forms/Select.svelte";

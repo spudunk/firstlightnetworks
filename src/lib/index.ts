@@ -214,7 +214,7 @@ export const kits = [
     features: [
       "Custom Structured Wiring Map",
       "Custom Network Design",
-      "Pre-Built Custom Switch Rack",
+      "Pre-Built Custom Network Rack",
       "10Gb Fiber (SFP+) Gateway and Switch",
       "4x 2.5Gb Wi-Fi 7 Indoor Access Points",
       "2x 2.5Gb Wi-Fi 7 Outdoor Access Points",
@@ -272,70 +272,3 @@ export const downloads = [
     desc: "Calculate margin and labor savings from offering kits",
   },
 ];
-
-export const schemas = {
-  org: {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: business.name,
-    legalName: business.legalName,
-    url: "https://firstlightnetworks.com",
-    description:
-      "First Light Networks provides turnkey WiFi solutions for custom home builders. Reliable indoor and outdoor coverage with fast professional installation across the US.",
-    areaServed: "United States",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: business.rating.score,
-      reviewCount: business.rating.count,
-    },
-    knowsAbout: ["WiFi", "Home Networking", "Custom Home Construction", "Pre-configured Network Kits"],
-    serviceType: "Wireless Network Installation Services",
-  },
-  website: {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: business.name,
-    url: "https://firstlightnetworks.com",
-    description:
-      "Turn-key WiFi solutions for custom home builders and luxury estates.",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://firstlightnetworks.com/quote?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
-  },
-  howTo: {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: "How First Light Networks Delivers Turnkey WiFi for Custom Homes",
-    description:
-      "A simple 5-step process to get reliable, pre-configured indoor and outdoor WiFi installed in new construction homes.",
-    totalTime: "P3DT5H",
-    step: steps.map((step: any, index: number) => ({
-      "@type": "HowToStep",
-      position: index + 1,
-      name: step.title,
-      text: step.desc,
-    })),
-  },
-  portfolio: {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "First Light Networks Project Portfolio",
-    description: "Real-world WiFi installations for luxury homes, estates, and custom construction projects.",
-    itemListElement: projects.map((project: any, index: number) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "CreativeWork",
-        name: project.title,
-        description: project.excerpt.join(" "),
-        about: {
-          "@type": "Thing",
-          name: project.type,
-        },
-        result: project.result,
-      },
-    })),
-  }
-}

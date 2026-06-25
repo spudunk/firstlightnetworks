@@ -1,6 +1,6 @@
 import { superValidate, message } from 'sveltekit-superforms';
 import { zod4 } from 'sveltekit-superforms/adapters';
-import { quoteSchema } from './schema';
+import { quoteSchema } from '$lib/schemas';
 import { fail } from '@sveltejs/kit';
 
 export const load = async () => {

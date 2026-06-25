@@ -1,21 +1,23 @@
 <script lang="ts">
   import "./layout.css";
-  import favicon from "$lib/assets/favicon.svg";
   import Logo from "$lib/Logo.svelte";
   import type { LayoutProps } from "./$types";
   import { slide } from "svelte/transition";
-  import { schemas } from "$lib";
   import { business, headerLinks, footerLinks } from "$lib";
+  import { organizationSchema, websiteSchema  } from "$lib/schemas";
 
   let { data, children }: LayoutProps = $props();
   let mobileOpen = $state(false);
 
-  const organizationSchema = $derived(schemas.org);
-  const websiteSchema = $derived(schemas.website);
 </script>
 
 <svelte:head>
-  <link rel="icon" href={favicon} />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="First Light" />
+  <link rel="manifest" href="/site.webmanifest" />
   <script type="application/ld+json">
     {@html JSON.stringify(organizationSchema)}
   </script>
@@ -30,17 +32,25 @@
     class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur-md z-50 border-b border-zinc-800"
   >
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3" onclick={() => (mobileOpen = false)}>
+      <a
+        href="/"
+        class="flex items-center gap-3"
+        onclick={() => (mobileOpen = false)}
+      >
         <div
           class="w-14 rounded-xl flex items-center justify-center text-xl fill-white font-bold"
         >
           <Logo />
         </div>
         <div>
-          <span class="text-sm xs:text-md sm:text-2xl font-semibold tracking-tight">
+          <span
+            class="text-sm xs:text-md sm:text-2xl font-semibold tracking-tight"
+          >
             {business.name}
           </span>
-          <p class="text-xs text-zinc-400 -mt-1 hidden sm:block">WiFi Everywhere</p>
+          <p class="text-xs text-zinc-400 -mt-1 hidden sm:block">
+            WiFi Everywhere
+          </p>
         </div>
       </a>
 
@@ -100,15 +110,18 @@
         transition:slide={{ duration: 150 }}
       >
         {#each headerLinks as link}
-          <a href={link.href} class="py-1" onclick={() => (mobileOpen = false)}>{link.label}</a>
+          <a href={link.href} class="py-1" onclick={() => (mobileOpen = false)}
+            >{link.label}</a
+          >
         {/each}
-        <a href="/contact" class="py-1" onclick={() => (mobileOpen = false)}>Contact</a>
+        <a href="/contact" class="py-1" onclick={() => (mobileOpen = false)}
+          >Contact</a
+        >
 
         <a
           href="/quote"
           class="mt-2 bg-blue-600 text-center py-3 rounded-2xl font-semibold"
-          onclick={() => (mobileOpen = false)}
-          >Get Quote</a
+          onclick={() => (mobileOpen = false)}>Get Quote</a
         >
       </div>
     {/if}
@@ -143,7 +156,9 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-8">
           {#each footerLinks as section}
             <div>
-              <span class="font-semibold text-white mb-4 inline-block">{section.heading}</span>
+              <span class="font-semibold text-white mb-4 inline-block"
+                >{section.heading}</span
+              >
               <div class="space-y-2">
                 {#each section.links as link}
                   <a href={link.href} class="block hover:text-white"
