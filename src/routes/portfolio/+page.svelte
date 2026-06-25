@@ -21,7 +21,7 @@
     professional networking and WiFi solutions.
   </p>
 
-  <div class="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-6">
+  <div class="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-12">
     {#each projects as project}
       <div
         class="group rounded-3xl bg-zinc-900 border border-zinc-800 overflow-hidden flex flex-col"
