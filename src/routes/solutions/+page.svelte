@@ -3,6 +3,10 @@
   import { business, kits } from "$lib";
   import { solutionsSchema } from "$lib/schemas";
 
+  import Map from "virtual:icons/mdi/map-marker-outline";
+  import Wrench from "virtual:icons/mdi/tools";
+  import ShieldCheck from "virtual:icons/mdi/shield-check";
+
   // import type { PageProps } from "./$types";
   // let { data }: PageProps = $props();
 </script>
@@ -18,7 +22,7 @@
   </script>
 </svelte:head>
 
-<main class="max-w-7xl mx-auto px-6 py-16">
+<main class="max-w-7xl mx-auto px-6 my-16">
   <div class="max-w-4xl mb-16 md:text-lg">
     <h1 class="text-6xl font-bold tracking-tighter">
       Solutions built for real homes.
@@ -42,9 +46,50 @@
     </ul>
   </div>
 
+  <!-- On-Site Service -->
+  <section class="my-16">
+    <h2 class="text-4xl font-semibold">On-Site Service</h2>
+    <p class="mt-4 text-lg text-zinc-400 max-w-3xl">
+      Premium full-service solution. Our team handles everything end-to-end for
+      guaranteed whole-home and outdoor coverage.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8 mt-8">
+      <div class="bg-zinc-900 p-8 rounded-3xl">
+        <div class="text-5xl mb-6"><Map /></div>
+        <h3 class="text-2xl font-semibold mb-3 text-blue-200">
+          Custom Site Design
+        </h3>
+        <p class="text-zinc-400">
+          We survey your property and create a tailored plan with coverage maps,
+          hardware specs, and wiring guidance.
+        </p>
+      </div>
+      <div class="bg-zinc-900 p-8 rounded-3xl">
+        <div class="text-5xl mb-6"><Wrench /></div>
+        <h3 class="text-2xl font-semibold mb-3 text-blue-200">
+          Professional Installation
+        </h3>
+        <p class="text-zinc-400">
+          Our certified techs install, configure, and optimize the system on-site
+          for flawless performance.
+        </p>
+      </div>
+      <div class="bg-zinc-900 p-8 rounded-3xl">
+        <div class="text-5xl mb-6"><ShieldCheck /></div>
+        <h3 class="text-2xl font-semibold mb-3 text-blue-200">
+          Guaranteed Results
+        </h3>
+        <p class="text-zinc-400">
+          3-year warranty, post-install testing, homeowner walkthrough, and
+          ongoing support included.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- Pre-Configured Kits -->
   <section>
-
     <h2 class="text-4xl font-semibold">Pre-Configured Kits</h2>
 
     <p class="mt-6">
@@ -57,4 +102,5 @@
       {/each}
     </div>
   </section>
+  
 </main>
