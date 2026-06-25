@@ -3,6 +3,9 @@
   import Clock from "virtual:icons/mdi/clock-outline";
   import Home from "virtual:icons/mdi/home-outline";
   import Lead from "virtual:icons/mdi/award";
+  import Wifi from "virtual:icons/mdi/wifi";
+  import Shield from "virtual:icons/mdi/shield-check";
+  import Heart from "virtual:icons/mdi/heart-outline";
 
   import StarRating from "$lib/StarRating.svelte";
   import Barn from "$lib/Barn.svg.svelte";
@@ -14,10 +17,10 @@
 </script>
 
 <svelte:head>
-  <title>Premium WiFi for Custom Home Builders • First Light Networks</title>
+  <title>Premium WiFi for Everyone • First Light Networks</title>
   <meta
     name="description"
-    content="First Light Networks provides turnkey WiFi solutions for custom home builders. Reliable indoor and outdoor coverage with fast professional installation across the US."
+    content="First Light Networks provides turnkey WiFi solutions for home owners and builders. Reliable indoor and outdoor coverage with fast professional installation across the US."
   />
 </svelte:head>
 
@@ -40,13 +43,13 @@
             class="text-6xl md:text-7xl font-bold leading-tight tracking-tighter"
           >
             Turn-key WiFi.<br />
-            <span class="text-blue-500">Built for builders.</span>
+            <span class="text-blue-500">Built for everyone.</span>
           </h1>
 
           <p class="text-xl text-zinc-400 max-w-lg">
             Pre-configured, fully tested kits delivering flawless indoor &amp;
             outdoor coverage. <span class="text-zinc-200">
-              Save time, impress clients, lead the industry.
+              Always stay connected.
             </span>
           </p>
 
@@ -137,6 +140,47 @@
           <p class="text-zinc-400">
             Built-in Wi-Fi is not common in custom home construction yet, but it
             will be.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Homeowners Value Propositions -->
+  <section class="py-20 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-center text-4xl font-semibold mb-12">
+        Why Homeowners Choose {business.name}
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-zinc-950 p-8 rounded-3xl">
+          <div class="text-5xl mb-6"><Wifi /></div>
+          <h3 class="text-2xl font-semibold mb-3 text-blue-200">
+            Whole-Home Coverage
+          </h3>
+          <p class="text-zinc-400">
+            Blazing fast, reliable Wi-Fi in every room and outdoor space—no dead
+            zones.
+          </p>
+        </div>
+        <div class="bg-zinc-950 p-8 rounded-3xl">
+          <div class="text-5xl mb-6"><Shield /></div>
+          <h3 class="text-2xl font-semibold mb-3 text-blue-200">
+            Secure &amp; Smart
+          </h3>
+          <p class="text-zinc-400">
+            Enterprise security and seamless integration with all your smart home
+            devices.
+          </p>
+        </div>
+        <div class="bg-zinc-950 p-8 rounded-3xl">
+          <div class="text-5xl mb-6"><Heart /></div>
+          <h3 class="text-2xl font-semibold mb-3 text-blue-200">
+            Zero Headaches
+          </h3>
+          <p class="text-zinc-400">
+            Professional install and dedicated support. Set it and forget it.
           </p>
         </div>
       </div>
