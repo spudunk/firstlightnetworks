@@ -153,7 +153,7 @@
       defer
     ></script>
     <div
-      class="hs-form-frame bg-neutral-100 rounded mt-12 min-h-[720px]"
+      class="hs-form-frame bg-zinc-950 rounded mt-12 min-h-[720px]"
       data-region="na2"
       data-form-id="1fcf4c95-88bf-4f08-9144-eee5ab4d6cdb"
       data-portal-id="246308218"
