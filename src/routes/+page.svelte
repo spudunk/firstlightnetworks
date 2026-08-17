@@ -22,6 +22,7 @@
     name="description"
     content="First Light Networks provides turnkey WiFi solutions for home owners and builders. Reliable indoor and outdoor coverage with fast professional installation across the US."
   />
+  <link rel="canonical" href="https://firstlightnetworks.com" />
 </svelte:head>
 
 <main class="min-h-screen bg-zinc-950 text-white">
