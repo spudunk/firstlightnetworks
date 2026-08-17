@@ -5,7 +5,6 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"dev:db": "wrangler dev --local -- vite",
 		"build": "vite build",
 		"preview": "wrangler dev .svelte-kit/cloudflare/_worker.js --port 4173",
 		"prepare": "svelte-kit sync || echo ''",
