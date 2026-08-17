@@ -1,23 +1,33 @@
-import { superValidate, message } from 'sveltekit-superforms';
-import { zod4 } from 'sveltekit-superforms/adapters';
-import { quoteSchema } from '$lib/schemas';
 import { fail } from '@sveltejs/kit';
-
-export const load = async () => {
-	const form = await superValidate(zod4(quoteSchema));
-	return { form };
-};
+import { dev } from '$app/environment';
+import { getDb } from '$lib/server/db/index.js';
+import { leads } from '$lib/server/db/schema.js';
+import { quoteSchema } from '$lib/quote.js';
 
 export const actions = {
-	default: async ({ request }) => {
-		const form = await superValidate(request, zod4(quoteSchema));
-		if (!form.valid) {
-			return fail(400, { form });
+	submit: async ({ request, platform }) => {
+		const parsed = quoteSchema.safeParse(Object.fromEntries(await request.formData()));
+		if (!parsed.success) {
+			return fail(400, {
+				error: parsed.error.issues[0]?.message ?? 'Invalid form data'
+			});
 		}
 
-		// TODO: send email, save to DB, etc.
-		console.log('Quote submitted:', form.data);
+		if (dev) {
+			console.log(parsed.data);
+		}
 
-		return message(form, 'Your quote request has been received. We\'ll be in touch within 24 hours.');
+		if (!platform?.env.DB) {
+			return fail(500, { error: 'Database unavailable in environment' });
+		}
+
+		try {
+			await getDb(platform.env.DB).insert(leads).values(parsed.data);
+			return {message: `Your request has been received. We'll be in touch within a few days`}
+		} catch (error) {
+			return fail(500, {
+				error: error instanceof Error ? error.message : String(error)
+			});
+		}
 	}
 };
