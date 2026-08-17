@@ -49,7 +49,7 @@ export const actions = {
 					})
 				);
 			}
-			return {message: `Your request has been received. We'll be in touch within a few days`}
+			return {message: `Your request has been received. We'll be in touch soon.`}
 		} catch (error) {
 			return fail(500, {
 				error: error instanceof Error ? error.message : String(error)
