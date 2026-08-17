@@ -114,6 +114,17 @@ export const projects = [
     result: 'Wired backbone to every building • Indoor + immediate outdoor coverage • Simple, reliable'
   },
   {
+    type: 'Residential',
+    title: 'Small Neighborhood Home',
+    subtitle: '3 Bedrooms + yard',
+    excerpt: [
+      'This customer was remodeling their home on a 1 acre lot in a small-town neighborhood. They needed 6 cameras with 24/7 recording for full outdoor surveillance coverage. They had a Starlink kit that hadn\'t been installed.',
+      'We installed structured wiring to 2 wireless access points, 2 bedrooms wall-jacks, and 7 camera locations. We installed an indoor access point in the center of the house, an outdoor access point and Starlink dish on the back of the house, and cameras on 4 corners, the front porch, and over the back yard. All of this is powered by a lithium pure-sine UPS for high-reliability.',
+      'Finally, we configured a single WiFi network SSID using PPSK to seperate traffic into 3 VLANs with different passwords, rules, and security settings for the adults, the guests, and the kids.'
+    ],
+    result: 'Highly-reliable WiFi for the house and back yard • Full outdoor camera coverage • Permanent ad secure Starlink install'
+  },
+  {
     type: 'Future - Rural Residential',
     title: 'Custom Log Cabin with Shop',
     subtitle: 'New construction + outbuildings',
@@ -125,6 +136,7 @@ export const projects = [
     ],
     result: '6 GHz 80 MHz mesh links buildings • 2.4/5 GHz free for clients • Full indoor coverage • No trenching'
   },
+ 
 ];
 
 type Testimonial =
