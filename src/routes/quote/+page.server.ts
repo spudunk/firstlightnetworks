@@ -1,8 +1,8 @@
 import { fail } from '@sveltejs/kit';
 import { dev } from '$app/environment';
-import { getDb } from '$lib/server/db/index.js';
-import { leads } from '$lib/server/db/schema.js';
-import { quoteSchema } from '$lib/quote.js';
+import { getDb } from '$lib/server/db/index';
+import { leads } from '$lib/server/db/schema';
+import { quoteSchema } from '$lib/schemas';
 
 export const actions = {
 	submit: async ({ request, platform }) => {
