@@ -29,7 +29,7 @@
 <div class="min-h-screen bg-zinc-950 text-white">
   <!-- Navbar -->
   <nav
-    class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur-md z-50 border-b border-zinc-800"
+    class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur-md z-50 border-b border-zinc-800 h-24"
   >
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
       <a
@@ -128,7 +128,7 @@
   </nav>
 
   <!-- Page Content -->
-  <div class="pt-20">
+  <div class="pt-24">
     {@render children()}
   </div>
 
