@@ -24,12 +24,14 @@ export async function GET({ platform, cookies, url }) {
 
   // escape if invalid key
   if (paramKey !== validKey) {
-    console.log(validKey);
     return json({ message: 'unauthenticated' })
   }
 
   // escape in production
-  if (!dev) return json({ message: 'invalid environment' });
+  if (!dev){
+    console.log(validKey);
+    return json({ message: 'invalid environment' });
+  } 
 
 
   // Get database
