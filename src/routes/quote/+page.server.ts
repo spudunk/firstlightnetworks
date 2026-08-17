@@ -22,7 +22,33 @@ export const actions = {
 		}
 
 		try {
+			// Insert to D1
 			await getDb(platform.env.DB).insert(leads).values(parsed.data);
+
+			// Send email
+			if (platform.env.EMAIL) {
+				platform.ctx.waitUntil(
+					platform.env.EMAIL.send({
+						from: {
+							email: "quotes@notify.firstlightnetworks.com",
+							name: "First Light Networks"
+						},
+						to: "chris@firstlightnetworks.com",
+						replyTo: parsed.data.email,
+						subject: `New quote request from ${parsed.data.name}`,
+						text: [
+							parsed.data.name,
+							parsed.data.email,
+							parsed.data.phone,
+							`${parsed.data.numberRooms} rooms · ${parsed.data.numberAcres} acres`,
+							`Cameras: ${parsed.data.cameras}`,
+							`Access Controls: ${parsed.data.accessControl}`,
+							`Multi WAN: ${parsed.data.multiWAN}`,
+							`Parental Controls: ${parsed.data.parentalControls}`
+						].join("\n")
+					})
+				);
+			}
 			return {message: `Your request has been received. We'll be in touch within a few days`}
 		} catch (error) {
 			return fail(500, {
