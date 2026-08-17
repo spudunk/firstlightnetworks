@@ -74,7 +74,7 @@
         <a
           href="/quote"
           onclick={() => (mobileOpen = !mobileOpen)}
-          class="bg-blue-600 hover:bg-blue-500 px-2 py-3 rounded-2xl text-sm font-semibold transition text-nowrap"
+          class="bg-blue-600 hover:bg-blue-500 px-2 md:px-4 py-3 rounded-2xl text-sm font-semibold transition text-nowrap"
         >
           Get Quote
         </a>
