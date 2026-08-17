@@ -11,7 +11,7 @@
   import Barn from "$lib/Barn.svg.svelte";
 
   import { trustItems, testimonials, business } from "$lib";
-  
+
   // import type { PageProps } from "./$types";
   // let { data }: PageProps = $props();
 </script>
@@ -26,6 +26,26 @@
 </svelte:head>
 
 <main class="min-h-screen bg-zinc-950 text-white">
+  <section class=" mx-auto px-6 py-2 bg-green-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <span class="font-bold">Contractors:</span>
+      <a
+        target="_blank"
+        href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NDZlMW5qajcybzRoNGQ2Y2lsNm5ycW0yZjJfMjAyNjA4MjJUMTQwMDAwWiBjXzA3YTBmOGFiNDQwM2E1OWJmZGNlOTMwYzkwNmJiNzkwNTMyODRjYzQ0NTFjNmIzYTEyNDRmOTcwMGM0NDMxNzVAZw&tmsrc=c_07a0f8ab4403a59bfdce930c906bb79053284cc4451c6b3a1244f9700c443175%40group.calendar.google.com&scp=ALL"
+      >
+        <span class="underline">
+          Click here to add
+          <span class="font-bold">FLN - Network Basics</span>
+        </span>
+      </a>
+      to your calendar OR
+      <a target="_blank" href="https://meet.google.com/mmf-jcrg-cjd">
+        click here to join:
+        <span class="underline"> meet.google.com/mmf-jcrg-cjd </span>
+      </a>
+    </div>
+  </section>
+
   <!-- Hero -->
   <section
     class="pt-8 sm:pt-16 md:pt-24 pb-20 bg-linear-to-br from-zinc-900 via-zinc-950 to-black overflow-hidden"
@@ -44,7 +64,9 @@
             class="text-6xl md:text-7xl font-bold leading-tight tracking-tighter"
           >
             Turn-key WiFi.<br />
-            <span class="text-blue-500">Built for everyone.</span>
+            <span class="text-blue-500 tracking-tight"
+              >For the House, <br />Shop, and Field</span
+            >
           </h1>
 
           <p class="text-xl text-zinc-400 max-w-lg">
@@ -81,7 +103,7 @@
         </div>
 
         <!-- Hero Image -->
-        <div class="relative ">
+        <div class="relative">
           <div
             class="absolute -inset-20 bg-blue-600/20 rounded-full blur-3xl"
           ></div>
@@ -171,8 +193,8 @@
             Secure &amp; Smart
           </h3>
           <p class="text-zinc-400">
-            Enterprise security and seamless integration with all your smart home
-            devices.
+            Enterprise security and seamless integration with all your smart
+            home devices.
           </p>
         </div>
         <div class="bg-zinc-950 p-8 rounded-3xl">
