@@ -16,7 +16,13 @@
       "database_name": "fln",
       "database_id": "81be5e15-8ea5-4847-a33c-8423874d69f0",
       "migrations_dir": "drizzle",
-      "migrations_pattern": "drizzle/*/migration.sql"
-    }
-  ]
+      "migrations_pattern": "drizzle/*/migration.sql",
+    },
+  ],
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "destination_address": "chris@firstlightnetworks.com",
+    },
+  ],
 }
