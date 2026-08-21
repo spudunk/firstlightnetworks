@@ -9,7 +9,7 @@ import { business, steps, projects, kits } from "$lib";
 
 export const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "HomeAndConstructionBusiness",
   name: business.name,
   legalName: business.legalName,
   url: "https://firstlightnetworks.com",
@@ -22,7 +22,6 @@ export const organizationSchema = {
     reviewCount: business.rating.count,
   },
   knowsAbout: ["WiFi", "Home Networking", "Custom Home Construction", "Pre-configured Network Kits"],
-  serviceType: "Wireless Network Installation Services",
 }
 
 export const websiteSchema = {
