@@ -17,10 +17,10 @@
 </script>
 
 <svelte:head>
-  <title>Premium WiFi for Everyone • First Light Networks</title>
+  <title>Premium Wi-Fi for Everyone • First Light Networks LLC</title>
   <meta
     name="description"
-    content="First Light Networks provides turnkey WiFi solutions for home owners and builders. Reliable indoor and outdoor coverage with fast professional installation across the US."
+    content="First Light Networks provides turnkey Wi-Fi solutions for home builders. Reliable indoor and outdoor coverage with professional installation across the US."
   />
   <link rel="canonical" href="https://firstlightnetworks.com" />
 </svelte:head>
@@ -64,8 +64,8 @@
             class="text-6xl md:text-7xl font-bold leading-tight tracking-tighter"
           >
             Turn-key WiFi.<br />
-            <span class="text-blue-500 tracking-tight"
-              >For the House, <br />Shop, and Field</span
+            <span class="text-blue-500 tracking-tight text-5xl md:text-6xl"
+              >For the House, <br />Shop, and Property</span
             >
           </h1>
 
