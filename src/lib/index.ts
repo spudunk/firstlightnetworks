@@ -40,11 +40,11 @@ export const footerLinks = [
   }
 ]
 
-export const trustItems = ["Structured Wiring Plans", "Full indoor + outdoor coverage", "Pre-configured & tested kits", "3-year warranty", "Builder volume pricing"];
+export const trustItems = ["Structured Cabling Plans", "Full indoor + outdoor coverage", "Pre-configured & tested kits", "3-year warranty", "Builder volume pricing"];
 
 export const steps = [
   { number: '01', title: 'Consultation', desc: 'Share your building plans and requirements. We review and send a detailed proposal with coverage maps, hardware list, and pricing within 3 days.' },
-  { number: '02', title: 'System Design', desc: 'We create and send detailed wiring plans for your electrician so they can install, terminate, and test all the structured wiring while the walls are open.' },
+  { number: '02', title: 'System Design', desc: 'We create and send detailed cabling plans for your electrician so they can install, terminate, and test all the structured wiring while the walls are open.' },
   { number: '03', title: 'Build & Test', desc: 'Your kit is assembled, configured, and tested in our lab. We verify everything works then label, pack, and ship the whole system.' },
   { number: '04', title: 'Installation', desc: 'Kits arrive labeled and ready. Your electrician or low-voltage team follows our simple plug-and-play guide. Average install: 3–5 hours.' },
   { number: '05', title: 'Support & Handover', desc: 'We provide remote go-live support. Homeowners receive a simple guide and we remain available for any future questions or optimizations.' }
