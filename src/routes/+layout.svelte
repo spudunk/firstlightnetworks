@@ -18,12 +18,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="First Light" />
   <link rel="manifest" href="/site.webmanifest" />
-  <script type="application/ld+json">
-    {@html JSON.stringify(organizationSchema)}
-  </script>
-  <script type="application/ld+json">
-    {@html JSON.stringify(websiteSchema)}
-  </script>
+  {@html `<script type="application/ld+json"> ${JSON.stringify(organizationSchema)} </script>`}
+  {@html `<script type="application/ld+json"> ${JSON.stringify(websiteSchema)} </script>`}
 </svelte:head>
 
 <div class="min-h-screen bg-zinc-950 text-white">
