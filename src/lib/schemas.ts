@@ -14,7 +14,7 @@ export const organizationSchema = {
   legalName: business.legalName,
   url: "https://firstlightnetworks.com",
   description:
-    "First Light Networks provides turnkey WiFi solutions for custom home builders. Reliable indoor and outdoor coverage with fast professional installation across the US.",
+    "First Light Networks provides turnkey WiFi solutions for home builders. Reliable indoor and outdoor coverage with professional installation across the US.",
   areaServed: "United States",
   aggregateRating: {
     "@type": "AggregateRating",
