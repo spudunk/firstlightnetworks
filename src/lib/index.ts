@@ -182,19 +182,19 @@ export const testimonials: Testimonial[] = [
 
 export const kits = [
   {
-    title: "Essential Coverage",
+    title: "2.5 Gig Essential Starter",
     subtitle: "Up to 4,000 sq. ft.",
     price: "$999",
     image: "",
     features: [
-      "ER605 Advanced Omada Router",
-      "OC220 Upgraded Omada Controller",
-      "ES206GP 6-Port PoE Switch",
+      "Fusion 2.5G Omada Gateway",
+      "ES206XPP-M2 6-Port PoE Switch",
       "EAP723 WiFi 7 Indoor Access Point",
-      "EAP650 IP69 Outdoor Access Point",
-      "Backup Uninerruptible Power Supply",
+      "EAP650-Outdoor IP69 Access Point",
+      "CyberPower SL700U Backup UPS",
+      "Spare 10Gb SFP+ Port for Expansion",
+      "Expandable with any Omada Devices",
       "Pre-configured with Expert Support",
-      "Expandable with any Omada Devices"
     ],
     buttonText: "Buy This Kit Now",
     link: "https://buy.stripe.com/dRmbJ3brS9f3dlo0jT7IY01"
