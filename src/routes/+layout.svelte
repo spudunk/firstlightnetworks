@@ -45,7 +45,7 @@
             {business.name}
           </span>
           <p class="text-xs text-zinc-400 -mt-1 hidden sm:block">
-            WiFi Everywhere
+            Wi-Fi Made Easy
           </p>
         </div>
       </a>
@@ -142,7 +142,7 @@
             <span class="text-xl font-semibold">{business.name}</span>
           </div>
           <p class="max-w-xs">
-            Turn-key WiFi solutions for custom home builders and luxury estates.
+            Turn-key WiFi solutions for custom home builders and home owners.
           </p>
           <div class="mt-6 text-xs">
             © 2026 {business.legalName}. All rights reserved.

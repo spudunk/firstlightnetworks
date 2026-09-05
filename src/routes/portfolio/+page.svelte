@@ -6,7 +6,7 @@
 
 <svelte:head>
   <title>Real WiFi Projects & Case Studies • First Light Networks</title>
-  <meta name="description" content="View real-world WiFi installations by First Light Networks. See exceptional coverage solutions for luxury homes, estates, and custom construction projects across the country.">
+  <meta name="description" content="View real-world WiFi installations by First Light Networks. See exceptional coverage solutions for properties, estates, and custom construction projects across the country.">
   <script type="application/ld+json">
     {@html JSON.stringify(portfolioSchema)}
   </script>

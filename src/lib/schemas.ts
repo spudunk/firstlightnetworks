@@ -30,7 +30,7 @@ export const websiteSchema = {
   name: business.name,
   url: "https://firstlightnetworks.com",
   description:
-    "Turn-key WiFi solutions for custom home builders and luxury estates.",
+    "Turn-key WiFi solutions for custom home builders and home owners.",
   potentialAction: {
     "@type": "SearchAction",
     target: "https://firstlightnetworks.com/quote?q={search_term_string}",
@@ -57,7 +57,7 @@ export const portfolioSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "First Light Networks Project Portfolio",
-  description: "Real-world WiFi installations for luxury homes, estates, and custom construction projects.",
+  description: "Real-world WiFi installations for homes, estates, and custom construction projects.",
   itemListElement: projects.map((project: any, index: number) => ({
     "@type": "ListItem",
     position: index + 1,

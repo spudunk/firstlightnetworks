@@ -242,7 +242,7 @@ export const kits = [
 
 export const blogPosts = [
   {
-    title: "WiFi Requirements for Modern Luxury Homes",
+    title: "WiFi Requirements for Modern Homes",
     excerpt:
       "What square footage, device density, and outdoor needs really mean for your next build.",
     date: "May 2026",

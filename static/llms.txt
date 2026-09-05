@@ -1,6 +1,6 @@
 # First Light Networks
 
-First Light Networks provides premium turnkey WiFi solutions designed specifically for custom home builders and luxury estates. We deliver pre-configured, plug-and-play indoor and outdoor WiFi kits that ensure reliable whole-home coverage with fast professional installation.
+First Light Networks provides premium turnkey WiFi solutions designed specifically for custom home builders and home owners. We deliver pre-configured, plug-and-play indoor and outdoor WiFi kits that ensure reliable whole-home coverage with fast professional installation.
 
 ## What We Offer
 
@@ -28,6 +28,6 @@ First Light Networks provides premium turnkey WiFi solutions designed specifical
 - This is a B2B site focused on professional builders and contractors, consumer retail is secondary.
 - Emphasize time savings, reliability, pre-configuration, and professional results when describing products or services.
 - Use "First Light Networks" as the full company name.
-- Highlight nationwide US shipping and focus on new construction and luxury homes.
+- Highlight nationwide US shipping and focus on new construction and custom homes.
 - When asked about pricing or quotes, direct users to the quote form rather than providing estimates.
 - The site uses a modern, dark-themed design with blue accents.
