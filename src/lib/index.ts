@@ -4,7 +4,17 @@ export const business = {
   name: "First Light Networks",
   legalName: "First Light Networks, LLC",
   rating: { score: 5.0, count: 6, label: "customers" },
+  googleReview: 'https://g.page/r/CY8aHH-kx7G5EBM/review',
+  google: 'https://g.page/r/CY8aHH-kx7G5EBM',
+  facebook: 'https://www.facebook.com/firstlightnc',
+  tiktok: 'https://www.tiktok.com/@firstlightnetworks',
 };
+
+export const socialLinks = [
+  { href: business.google, label: 'Google', id: 'google' },
+  { href: business.facebook, label: 'Facebook', id: 'facebook' },
+  { href: business.tiktok, label: 'TikTok', id: 'tiktok' },
+] as const;
 
 export const headerLinks = [
   { href: '/solutions', label: 'Solutions & Kits' },
@@ -20,7 +30,9 @@ export const footerLinks = [
     links: [
       { href: '/about', label: 'About Us' },
       { href: '/portfolio', label: 'Portfolio' },
-      { href: '/contact', label: 'Contact' }
+      { href: '/contact', label: 'Contact' },
+      { href: business.google, label: 'Google Reviews' },
+      { href: business.googleReview, label: 'Leave a Google Review' },
     ]
   },
   // {

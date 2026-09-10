@@ -3,8 +3,18 @@
   import Logo from "$lib/Logo.svelte";
   import type { LayoutProps } from "./$types";
   import { slide } from "svelte/transition";
-  import { business, headerLinks, footerLinks } from "$lib";
+  import { business, headerLinks, footerLinks, socialLinks } from "$lib";
   import { organizationSchema, websiteSchema  } from "$lib/schemas";
+  import GoogleIcon from "virtual:icons/simple-icons/google";
+  import FacebookIcon from "virtual:icons/simple-icons/facebook";
+  import TikTokIcon from "virtual:icons/simple-icons/tiktok";
+  import type { Component } from "svelte";
+
+  const socialIcons: Record<(typeof socialLinks)[number]["id"], Component> = {
+    google: GoogleIcon,
+    facebook: FacebookIcon,
+    tiktok: TikTokIcon,
+  };
 
   let { data, children }: LayoutProps = $props();
   let mobileOpen = $state(false);
@@ -144,6 +154,20 @@
           <p class="max-w-xs">
             Turn-key WiFi solutions for custom home builders and home owners.
           </p>
+          <div class="mt-6 flex items-center gap-2">
+            {#each socialLinks as social}
+              {@const Icon = socialIcons[social.id]}
+              <a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-2 rounded-xl border border-zinc-800 hover:border-zinc-500 hover:text-white transition"
+                aria-label={social.label}
+              >
+                <Icon class="size-5" />
+              </a>
+            {/each}
+          </div>
           <div class="mt-6 text-xs">
             © 2026 {business.legalName}. All rights reserved.
           </div>
@@ -157,8 +181,13 @@
               >
               <div class="space-y-2">
                 {#each section.links as link}
-                  <a href={link.href} class="block hover:text-white"
-                    >{link.label}</a
+                  <a
+                    href={link.href}
+                    class="block hover:text-white"
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={link.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined}>{link.label}</a
                   >
                 {/each}
               </div>

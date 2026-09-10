@@ -11,6 +11,7 @@
   import Barn from "$lib/Barn.svg.svelte";
 
   import { trustItems, testimonials, business } from "$lib";
+  import ClassBanner from "$lib/ClassBanner.svelte";
 
   // import type { PageProps } from "./$types";
   // let { data }: PageProps = $props();
@@ -26,25 +27,8 @@
 </svelte:head>
 
 <main class="min-h-screen bg-zinc-950 text-white">
-  <section class=" mx-auto px-6 py-2 bg-green-800">
-    <div class="max-w-7xl mx-auto px-6">
-      <span class="font-bold">Contractors:</span>
-      <a
-        target="_blank"
-        href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NDZlMW5qajcybzRoNGQ2Y2lsNm5ycW0yZjJfMjAyNjA4MjJUMTQwMDAwWiBjXzA3YTBmOGFiNDQwM2E1OWJmZGNlOTMwYzkwNmJiNzkwNTMyODRjYzQ0NTFjNmIzYTEyNDRmOTcwMGM0NDMxNzVAZw&tmsrc=c_07a0f8ab4403a59bfdce930c906bb79053284cc4451c6b3a1244f9700c443175%40group.calendar.google.com&scp=ALL"
-      >
-        <span class="underline">
-          Click here to add
-          <span class="font-bold">FLN - Network Basics</span>
-        </span>
-      </a>
-      to your calendar OR
-      <a target="_blank" href="https://meet.google.com/mmf-jcrg-cjd">
-        click here to join:
-        <span class="underline"> meet.google.com/mmf-jcrg-cjd </span>
-      </a>
-    </div>
-  </section>
+
+  <ClassBanner />
 
   <!-- Hero -->
   <section
@@ -92,11 +76,19 @@
           </div>
 
           <div class="flex items-center gap-8 text-sm pt-4">
-            <StarRating
-              score={business.rating.score}
-              count={business.rating.count}
-              label={business.rating.label}
-            />
+            <a
+              href={business.google}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:opacity-80 transition"
+              aria-label="Read our Google reviews"
+            >
+              <StarRating
+                score={business.rating.score}
+                count={business.rating.count}
+                label={business.rating.label}
+              />
+            </a>
             <div class="h-4 w-px bg-zinc-700"></div>
             <div>15+ years networking expertise</div>
           </div>

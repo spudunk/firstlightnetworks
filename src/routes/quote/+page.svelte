@@ -329,11 +329,19 @@
       </div>
 
       <div class="bg-zinc-900 rounded-3xl p-8 space-y-4">
-        <StarRating
-          score={business.rating.score}
-          count={business.rating.count}
-          label={business.rating.label}
-        />
+        <a
+          href={business.google}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex hover:opacity-80 transition"
+          aria-label="Read our Google reviews"
+        >
+          <StarRating
+            score={business.rating.score}
+            count={business.rating.count}
+            label={business.rating.label}
+          />
+        </a>
         <p class="text-sm text-zinc-400">
           15+ years networking expertise. Serving builders and homeowners
           nationwide.

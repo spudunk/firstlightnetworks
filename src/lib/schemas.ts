@@ -16,6 +16,7 @@ export const organizationSchema = {
   description:
     "First Light Networks provides turnkey WiFi solutions for home builders. Reliable indoor and outdoor coverage with professional installation across the US.",
   areaServed: "United States",
+  sameAs: [business.google, business.facebook, business.tiktok],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: business.rating.score,
