@@ -69,9 +69,9 @@ export const projects = [
     subtitle: '10-acre property, multiple outbuildings',
     excerpt: [
       'This customer lives in an area with poor cellular service. I installed an Omada wired network with indoor and outdoor Wi-Fi access points to extend coverage to the edges of the property. The owner can now make and receive calls and video calls anywhere on the property.',
-      'I also installed PoE cameras and a network video recorder for 24/7 monitoring of entrances from anywhere. They have an XGPON primary WAN, Starlink backup WAN, and UPS backup for the core of the network. They never lose Wi-Fi or internet access, even if the fiber is broken or the power goes out.'
+      'I also installed PoE cameras and a network video recorder for 24/7 recording of entrances from anywhere. They have an XGPON primary WAN, Starlink backup WAN, and UPS backup for the core of the network. They never lose Wi-Fi or internet access, even if the fiber is broken or the power goes out.'
     ],
-    result: 'Full property Wi-Fi • 24/7 security monitoring • Never lose connectivity'
+    result: 'Full property Wi-Fi • 24/7 security recorning • Never lose connectivity'
   },
   {
     type: 'Commercial',
@@ -79,7 +79,7 @@ export const projects = [
     subtitle: 'Two-building business',
     excerpt: [
       'This business owner was having connectivity problems with their POS systems, pumps, and devices across two buildings. They had an existing Starlink setup, but the Wi-Fi was inadequate, only covering a small portion of the primary cinder-block building. The second building is metal.',
-      'I installed an Omada wired network through both buildings with 4 access points and a wireless bridge between them. This completely solved the Wi-Fi coverage issues and provided wired connections for computers and a printer throughout both buildings. I also installed 20 cameras and an NVR for 24/7 recording and remote monitoring.'
+      'I installed an Omada wired network through both buildings with 4 access points and a wireless bridge between them. This completely solved the Wi-Fi coverage issues and provided wired connections for computers and a printer throughout both buildings. I also installed 20 cameras and an NVR for 24/7 recording and remote access.'
     ],
     result: 'Reliable POS & device connectivity • Full coverage indoors & out • Remote camera access'
   },
@@ -89,9 +89,9 @@ export const projects = [
     subtitle: '300ft between metal barns, no trenching possible',
     excerpt: [
       'This business owner wanted security cameras on their diesel tank and entrances at their dairy. They had fiber internet in the office. The best location for the cameras was on a metal barn building 300 ft from the office, separated by concrete and metal buildings. The entire area is concrete, so trenching was not an option. They also have large equipment that moves between buildings, so hanging aerial wire was not an option.',
-      'I installed an outdoor Omada mesh system with 2 nodes to extend the Wi-Fi over the entire property and connect a PoE switch in the outbuilding where the cameras were needed. Two PoE cameras were connected in the second building with 24/7 motion-triggered recording and remote monitoring, plus outdoor Wi-Fi for the entire area.'
+      'I installed an outdoor Omada mesh system with 2 nodes to extend the Wi-Fi over the entire property and connect a PoE switch in the outbuilding where the cameras were needed. Two PoE cameras were connected in the second building with 24/7 motion-triggered recording and remote access, plus outdoor Wi-Fi for the entire area.'
     ],
-    result: 'Outdoor mesh Wi-Fi • 24/7 motion-triggered recording • Remote monitoring anywhere'
+    result: 'Outdoor mesh Wi-Fi • 24/7 motion-triggered recording • Remote access anywhere'
   },
   {
     type: 'Commercial',

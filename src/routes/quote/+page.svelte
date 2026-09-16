@@ -30,7 +30,7 @@
     {
       name: "cameras",
       title: "Security Cameras",
-      desc: "PoE cameras and 24/7 remote monitoring",
+      desc: "PoE cameras and 24/7 remote access",
       icon: Camera,
     },
     {
