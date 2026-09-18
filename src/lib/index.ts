@@ -58,7 +58,7 @@ export const trustItems = ["Structured Cabling Plans", "Full indoor + outdoor co
 
 export const steps = [
   { number: '01', title: 'Consultation', desc: 'Share your building plans and requirements. We review and send a detailed proposal with coverage maps, hardware list, and pricing within 3 days.' },
-  { number: '02', title: 'System Design', desc: 'We create and send detailed cabling plans for your electrician so they can install, terminate, and test all the structured wiring while the walls are open.' },
+  { number: '02', title: 'System Design', desc: 'We create and send detailed cabling plans for your electrician so they can install, terminate, and test all the structured cabling while the walls are open.' },
   { number: '03', title: 'Build & Test', desc: 'Your system is assembled, configured, and tested in our lab. We verify everything works then label, pack, and ship it.' },
   { number: '04', title: 'Installation', desc: 'Systems arrive labeled and ready. Your electrician or low-voltage team follows our simple plug-and-play guide. Average install: 3–5 hours.' },
   { number: '05', title: 'Support & Handover', desc: 'We provide remote go-live support. Homeowners receive a simple guide and we remain available for any future questions or optimizations.' }
@@ -123,7 +123,7 @@ export const projects = [
     excerpt: [
       'This customer has a 5-acre lot with 4 buildings: a house, a garage 40 ft to the north of the house, a metal shop 20 ft north of the garage, and a barn 200 ft south of the house.',
       'I installed Cat 6 direct burial between all of the buildings as a backbone. Indoor access points in each of the buildings cover all the indoor spaces and outdoor areas immediately around them.',
-      'Update: This system is still in operation 6 years later and has become the backbone for multiple critical IoT and automation devices. While the system is rudimentary and that hardware has been phased out, it\'s still completely reliable and forward-compatible. The customer will probably need to upgrade a few devices in 2-3 years, but the structured wiring won\'t will last another decade or more.'
+      'Update: This system is still in operation 6 years later and has become the backbone for multiple critical IoT and automation devices. While the system is rudimentary and that hardware has been phased out, it\'s still completely reliable and forward-compatible. The customer will probably need to upgrade a few devices in 2-3 years, but the structured cabling won\'t will last another decade or more.'
     ],
     result: 'Wired backbone to every building • Indoor + immediate outdoor coverage • Simple, reliable'
   },
@@ -133,7 +133,7 @@ export const projects = [
     subtitle: '3 Bedrooms + yard',
     excerpt: [
       'This customer was remodeling their home on a 1 acre lot in a small-town neighborhood. They needed 6 cameras with 24/7 recording for full outdoor surveillance coverage. They had a Starlink kit that hadn\'t been installed.',
-      'We installed structured wiring to 2 wireless access points, 2 bedrooms wall-jacks, and 7 camera locations. We installed an indoor access point in the center of the house, an outdoor access point and Starlink dish on the back of the house, and cameras on 4 corners, the front porch, and over the back yard. All of this is powered by a lithium pure-sine UPS for high-reliability.',
+      'We installed structured cabling to 2 wireless access points, 2 bedrooms wall-jacks, and 7 camera locations. We installed an indoor access point in the center of the house, an outdoor access point and Starlink dish on the back of the house, and cameras on 4 corners, the front porch, and over the back yard. All of this is powered by a lithium pure-sine UPS for high-reliability.',
       'Finally, we configured a single WiFi network SSID using PPSK to seperate traffic into 3 VLANs with different passwords, rules, and security settings for the adults, the guests, and the kids.'
     ],
     result: 'Highly-reliable WiFi for the house and back yard • Full outdoor camera coverage • Permanent ad secure Starlink install'
@@ -220,7 +220,7 @@ export const kits = [
     price: "Custom Pricing",
     image: "",
     features: [
-      "Custom Structured Wiring Map",
+      "Custom Structured Cabling Map",
       "Custom Network Design",
       "Up to 200 Buildings",
       "10Gb Fiber-Optic LAN",
@@ -238,7 +238,7 @@ export const kits = [
     price: "$4,250",
     image: "",
     features: [
-      "Custom Structured Wiring Map",
+      "Custom Structured Cabling Map",
       "Custom Network Design",
       "Pre-Built Custom Network Rack",
       "10Gb Fiber (SFP+) Gateway and Switch",
