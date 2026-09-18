@@ -75,7 +75,7 @@
 
 <svelte:head>
   <title>Contact First Light Networks for Custom WiFi Quotes</title>
-  <meta name="description" content="Get in touch with First Light Networks for tailored WiFi kit quotes and expert support. We help custom home builders deliver exceptional connectivity on every project.">
+  <meta name="description" content="Get in touch with First Light Networks for tailored WiFi system quotes and expert support. We help custom home builders deliver exceptional connectivity on every project.">
 </svelte:head>
 
 <main class="max-w-4xl mx-auto px-6 py-16">

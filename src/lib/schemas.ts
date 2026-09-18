@@ -22,7 +22,7 @@ export const organizationSchema = {
     ratingValue: business.rating.score,
     reviewCount: business.rating.count,
   },
-  knowsAbout: ["WiFi", "Home Networking", "Custom Home Construction", "Pre-configured Network Kits"],
+  knowsAbout: ["WiFi", "Home Networking", "Custom Home Construction", "Pre-configured Network Systems"],
 }
 
 export const websiteSchema = {
@@ -78,9 +78,9 @@ export const portfolioSchema = {
 export const solutionsSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Pre-Configured WiFi Kits for Custom Homes",
+  name: "Pre-Configured WiFi Systems for Custom Homes",
   description:
-    "Professional indoor, outdoor, and whole-home WiFi systems designed for builders. Pre-configured kits that save time and deliver powerful coverage.",
+    "Professional indoor, outdoor, and whole-home WiFi systems designed for builders. Pre-configured systems that save time and deliver powerful coverage.",
   provider: {
     "@type": "Organization",
     name: business.name,
@@ -89,7 +89,7 @@ export const solutionsSchema = {
   areaServed: "United States",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "WiFi Kits",
+    name: "WiFi Systems",
     itemListElement: kits.map((kit: any, index: number) => ({
       "@type": "Offer",
       itemOffered: {

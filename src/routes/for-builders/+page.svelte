@@ -8,14 +8,14 @@
 
 	const benefits = [
 		{ icon: '⏱️', title: 'Win More Bids', text: 'Offering premium whole-home WiFi as a standard upgrade sets you apart from competitors still using consumer routers.' },
-		{ icon: '💰', title: 'Save Time & Money', text: 'Pre-configured kits eliminate hours of on-site configuration and expensive troubleshooting callbacks.' },
-		{ icon: '🤝', title: 'Volume Pricing', text: 'Builders ordering 5+ kits per year receive preferred pricing and dedicated account support.' }
+		{ icon: '💰', title: 'Save Time & Money', text: 'Pre-configured systems eliminate hours of on-site configuration and expensive troubleshooting callbacks.' },
+		{ icon: '🤝', title: 'Volume Pricing', text: 'Builders ordering 5+ systems per year receive preferred pricing and dedicated account support.' }
 	];
 </script>
 
 <svelte:head>
 	<title>Builder WiFi Solutions & Resources • First Light Networks</title>
-	<meta name="description" content="Partner with First Light Networks for premium WiFi kits built for builders. Access specs, CAD details, volume pricing, and tools to win more custom home projects." />
+	<meta name="description" content="Partner with First Light Networks for premium WiFi systems built for builders. Access specs, CAD details, volume pricing, and tools to win more custom home projects." />
 </svelte:head>
 
 <main class="max-w-7xl mx-auto px-6 py-16">
@@ -42,11 +42,11 @@
 		<div class="mt-8 grid md:grid-cols-2 gap-x-12 gap-y-10 text-sm">
 			<div>
 				<div class="font-semibold mb-1">Volume Discounts</div>
-				<p class="text-zinc-400">5–9 kits/year: 8% off • 10+ kits/year: 15% off + priority shipping</p>
+				<p class="text-zinc-400">5–9 systems/year: 8% off • 10+ systems/year: 15% off + priority shipping</p>
 			</div>
 			<div>
 				<div class="font-semibold mb-1">White-Label Options</div>
-				<p class="text-zinc-400">Co-branded kits and documentation available for larger partners.</p>
+				<p class="text-zinc-400">Co-branded systems and documentation available for larger partners.</p>
 			</div>
 			<div>
 				<div class="font-semibold mb-1">Dedicated Support</div>

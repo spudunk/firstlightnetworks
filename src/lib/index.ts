@@ -8,6 +8,8 @@ export const business = {
   google: 'https://g.page/r/CY8aHH-kx7G5EBM',
   facebook: 'https://www.facebook.com/firstlightnc',
   tiktok: 'https://www.tiktok.com/@firstlightnetworks',
+  // Pin a homepage post: "https://www.tiktok.com/@firstlightnetworks/video/123…"
+  featuredTikTok: '',
 };
 
 export const socialLinks = [
@@ -17,7 +19,7 @@ export const socialLinks = [
 ] as const;
 
 export const headerLinks = [
-  { href: '/solutions', label: 'Solutions & Kits' },
+  { href: '/solutions', label: 'Solutions & Systems' },
   // { href: '/for-builders', label: 'For Builders' },
   { href: '/how-it-works', label: 'How It Works' },
   { href: '/portfolio', label: 'Portfolio' },
@@ -52,13 +54,13 @@ export const footerLinks = [
   }
 ]
 
-export const trustItems = ["Structured Cabling Plans", "Full indoor + outdoor coverage", "Pre-configured & tested kits", "3-year warranty", "Builder volume pricing"];
+export const trustItems = ["Structured Cabling Plans", "Full indoor + outdoor coverage", "Pre-configured & tested systems", "3-year warranty", "Builder volume pricing"];
 
 export const steps = [
   { number: '01', title: 'Consultation', desc: 'Share your building plans and requirements. We review and send a detailed proposal with coverage maps, hardware list, and pricing within 3 days.' },
   { number: '02', title: 'System Design', desc: 'We create and send detailed cabling plans for your electrician so they can install, terminate, and test all the structured wiring while the walls are open.' },
-  { number: '03', title: 'Build & Test', desc: 'Your kit is assembled, configured, and tested in our lab. We verify everything works then label, pack, and ship the whole system.' },
-  { number: '04', title: 'Installation', desc: 'Kits arrive labeled and ready. Your electrician or low-voltage team follows our simple plug-and-play guide. Average install: 3–5 hours.' },
+  { number: '03', title: 'Build & Test', desc: 'Your system is assembled, configured, and tested in our lab. We verify everything works then label, pack, and ship it.' },
+  { number: '04', title: 'Installation', desc: 'Systems arrive labeled and ready. Your electrician or low-voltage team follows our simple plug-and-play guide. Average install: 3–5 hours.' },
   { number: '05', title: 'Support & Handover', desc: 'We provide remote go-live support. Homeowners receive a simple guide and we remain available for any future questions or optimizations.' }
 ];
 
@@ -208,7 +210,7 @@ export const kits = [
       "Expandable with any Omada Devices",
       "Pre-configured with Expert Support",
     ],
-    buttonText: "Buy This Kit Now",
+    buttonText: "Buy This System Now",
     link: "https://buy.stripe.com/dRmbJ3brS9f3dlo0jT7IY01"
   },
   {
@@ -245,7 +247,7 @@ export const kits = [
       "Keystone Patch Panel",
       "Rackmount UPS",
     ],
-    buttonText: "Buy This Kit Now",
+    buttonText: "Buy This System Now",
     link: "https://buy.stripe.com/8x25kF0Ne2QF6X0c2B7IY00"
   },
 ];
@@ -293,6 +295,6 @@ export const downloads = [
   {
     title: "ROI Calculator",
     type: "Spreadsheet",
-    desc: "Calculate margin and labor savings from offering kits",
+    desc: "Calculate margin and labor savings from offering systems",
   },
 ];

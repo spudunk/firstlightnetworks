@@ -12,6 +12,7 @@
 
   import { trustItems, testimonials, business } from "$lib";
   import ClassBanner from "$lib/ClassBanner.svelte";
+  import SocialSection from "$lib/SocialSection.svelte";
 
   // import type { PageProps } from "./$types";
   // let { data }: PageProps = $props();
@@ -54,7 +55,7 @@
           </h1>
 
           <p class="text-xl text-zinc-400 max-w-lg">
-            Pre-configured, fully tested kits delivering flawless indoor &amp;
+            Pre-configured, fully tested systems delivering flawless indoor &amp;
             outdoor coverage. <span class="text-zinc-200">
               Always stay connected.
             </span>
@@ -65,7 +66,7 @@
               href="/quote"
               class="bg-white text-black px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-zinc-200 transition"
             >
-              Build Your Kit
+              Build Your System
             </a>
             <a
               href="/portfolio"
@@ -119,6 +120,8 @@
     </div>
   </div>
 
+  <SocialSection />
+
   <!-- Value Propositions -->
   <section class="py-20 bg-zinc-950">
     <div class="max-w-7xl mx-auto px-6">
@@ -133,7 +136,7 @@
             Save Installation Time
           </h3>
           <p class="text-zinc-400">
-            Pre-configured kits arrive ready to plug in. Most installs take
+            Pre-configured systems arrive ready to plug in. Most installs take
             under 4 hours.
           </p>
         </div>
@@ -242,7 +245,7 @@
         href="/quote"
         class="inline-block bg-white text-black px-12 py-5 rounded-2xl text-xl font-semibold hover:bg-zinc-200 transition"
       >
-        Get Your Custom Kit Quote →
+        Get Your Custom System Quote →
       </a>
       <p class="text-sm text-zinc-400 mt-6">
         Most quotes delivered within 24 hours

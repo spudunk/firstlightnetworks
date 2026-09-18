@@ -59,7 +59,7 @@
       desc: "A few details are enough to size indoor and outdoor coverage.",
     },
     {
-      title: "We design the kit",
+      title: "We design the system",
       desc: "Hardware, wiring guidance, and a recommendation matched to the site.",
     },
     {
@@ -81,7 +81,7 @@
   <title>Request a Custom WiFi Quote • First Light Networks</title>
   <meta
     name="description"
-    content="Request a personalized quote for premium WiFi kits designed for custom homes. First Light Networks offers fast quotes and builder-focused recommendations nationwide."
+    content="Request a personalized quote for premium WiFi systems designed for custom homes. First Light Networks offers fast quotes and builder-focused recommendations nationwide."
   />
 </svelte:head>
 

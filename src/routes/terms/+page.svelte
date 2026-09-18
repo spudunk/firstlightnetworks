@@ -23,7 +23,7 @@
       You may use our Services only for lawful purposes and in accordance with these Terms. You agree not to use the Services in any way that violates any applicable laws or regulations.
     </p>
     <p>
-      Our pre-configured network kits and solutions are designed for professional installation. While we provide detailed instructions, we recommend installation by qualified electricians or network technicians, especially for new construction projects.
+      Our pre-configured network systems and solutions are designed for professional installation. While we provide detailed instructions, we recommend installation by qualified electricians or network technicians, especially for new construction projects.
     </p>
 
     <h2 class="text-3xl font-semibold text-white mt-12">Orders and Payments</h2>

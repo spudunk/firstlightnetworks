@@ -46,7 +46,7 @@
 		<h2 class="text-4xl font-semibold mb-6">Helping existing homes and businesses too</h2>
 		<div class="text-lg text-zinc-300 space-y-6">
 			<p>Even though new construction is our primary focus, we continue to help homeowners and businesses who need better connectivity in existing properties. With our extensive experience in residential and commercial retrofits — and a <strong class="text-white">100% customer success rate</strong> — we offer practical, high-value solutions for older homes and buildings.</p>
-			<p>Whether you need a full retrofit or a targeted upgrade, we can provide pre-configured kits designed for easier installation, along with clear instructions and remote support. On-site installation is available for more complex retrofit scenarios.</p>
+			<p>Whether you need a full retrofit or a targeted upgrade, we can provide pre-configured systems designed for easier installation, along with clear instructions and remote support. On-site installation is available for more complex retrofit scenarios.</p>
 		</div>
 	</div>
 
@@ -57,7 +57,7 @@
 		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 			<div class="bg-zinc-900 p-8 rounded-3xl">
 				<h3 class="font-semibold text-xl mb-3">Turnkey simplicity</h3>
-				<p class="text-zinc-400">Fully configured kits with clear instructions and remote support</p>
+				<p class="text-zinc-400">Fully configured systems with clear instructions and remote support</p>
 			</div>
 			<div class="bg-zinc-900 p-8 rounded-3xl">
 				<h3 class="font-semibold text-xl mb-3">Proven expertise</h3>
@@ -73,7 +73,7 @@
 			</div>
 			<div class="bg-zinc-900 p-8 rounded-3xl md:col-span-2 lg:col-span-1">
 				<h3 class="font-semibold text-xl mb-3">Flexible service</h3>
-				<p class="text-zinc-400">Shipping kits nationwide with optional on-site work for special cases</p>
+				<p class="text-zinc-400">Shipping systems nationwide with optional on-site work for special cases</p>
 			</div>
 		</div>
 	</div>

@@ -12,10 +12,10 @@
 </script>
 
 <svelte:head>
-  <title>Custom Home WiFi Kits & Solutions • First Light Networks</title>
+  <title>Custom Home WiFi Systems & Solutions • First Light Networks</title>
   <meta
     name="description"
-    content="Explore professional WiFi solutions and pre-configured kits for custom homes. Indoor, outdoor, and whole-home systems that save builders time and ensure reliable coverage."
+    content="Explore professional WiFi solutions and pre-configured systems for custom homes. Indoor, outdoor, and whole-home systems that save builders time and ensure reliable coverage."
   />
   <script type="application/ld+json">
     {@html JSON.stringify(solutionsSchema)}
@@ -40,7 +40,7 @@
       </li>
       <li>
         <strong class="text-blue-200">Remote:</strong> For electricians, contractors,
-        and DIYers, we offer kits that come with custom pre-configured equipment,
+        and DIYers, we offer systems that come with custom pre-configured equipment,
         plans, technical training, guidance, and support.
       </li>
     </ul>
@@ -88,12 +88,12 @@
     </div>
   </section>
 
-  <!-- Pre-Configured Kits -->
+  <!-- Pre-Configured Systems -->
   <section>
-    <h2 class="text-4xl font-semibold">Pre-Configured Kits</h2>
+    <h2 class="text-4xl font-semibold">Pre-Configured Systems</h2>
 
     <p class="mt-6">
-      Skip the line and upgrade to one of our kits now, or start with a free consult call to build a complete solution. 
+      Skip the line and upgrade to one of our systems now, or start with a free consult call to build a complete solution. 
     </p>
 
     <div class="grid lg:grid-cols-3 gap-8 mt-8">
