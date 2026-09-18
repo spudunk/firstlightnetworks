@@ -50,7 +50,7 @@
             <span class="font-bold">FLN - Network Basics</span>
           </span>
         </a>
-        to your calendar for Saturday
+        to your calendar for Saturday morning
       {/if}
 
       {#if showJoin}
