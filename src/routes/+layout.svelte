@@ -55,7 +55,7 @@
             {business.name}
           </span>
           <p class="text-xs text-zinc-400 -mt-1 hidden sm:block">
-            Wi-Fi Made Easy
+            Connections for the Future
           </p>
         </div>
       </a>
