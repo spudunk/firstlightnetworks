@@ -50,7 +50,7 @@
         </div>
         <div>
           <span
-            class="inline text-sm md:text-lg lg:text-2xl font-semibold tracking-tight"
+            class="inline text-md md:text-lg lg:text-2xl font-semibold tracking-tight"
           >
             {business.name}
           </span>
