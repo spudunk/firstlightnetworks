@@ -81,7 +81,7 @@
   <title>Free plan • First Light Networks LLC</title>
   <meta
     name="description"
-    content="Get the free plan. Tell us about the home or property. We'll mark where the network cable should go, at no charge. Cable plans are ready within 3 days. Full-system proposal included."
+    content="Get the free plan. Tell us about the home or property. We'll mark where the network cable should go, at no charge. Cable plans are ready within 3 days."
   />
 </svelte:head>
 
@@ -98,7 +98,7 @@
     </h1>
     <p class="text-xl text-zinc-400 mt-4">
       Tell us about the home or property. We’ll mark where the network cable
-      should go, at no charge.
+      should go, at no charge. Full-system proposal included.
     </p>
   </div>
 
