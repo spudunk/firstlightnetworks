@@ -82,7 +82,7 @@ Do this first. The second click currently sells the old business.
 ### Header (`src/routes/+layout.svelte`)
 
 - Both "Get Quote" labels (desktop button, mobile menu) become **Free cabling plan**. Keep `href="/quote"`.
-- Remove `onclick={() => (mobileOpen = !mobileOpen)}` from the header quote link. It toggles the mobile menu and navigates. The mobile-menu quote link should still close the menu.
+
 - Keep Contact as the secondary button.
 
 ### Nav labels (`src/lib/index.ts` `headerLinks`)
