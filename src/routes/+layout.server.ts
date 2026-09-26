@@ -19,10 +19,10 @@ export const load: LayoutServerLoad = ({ platform }) => {
 		googleRating: (async () => {
 			const cached = kv ? await kv.get<StoredRating>(RATING_KEY, 'json') : null;
 			if (cached && Date.now() - cached.fetchedAt < FRESH_MS) {
-        console.log("reviews from cache")
+        // console.log("reviews from cache")
 				return { rating: cached.rating, reviewCount: cached.reviewCount };
 			}
-      console.log("reviews from API")
+      // console.log("reviews from API")
 			const fresh = await getGoogleRating(apiKey);
 			if (kv && fresh.rating != null) {
 				await kv.put(RATING_KEY, JSON.stringify({ ...fresh, fetchedAt: Date.now() }));
