@@ -156,7 +156,7 @@
 
           <p class="text-xl text-zinc-400 max-w-2xl">
             Fiber-internet is faster than wireless-mesh can handle. Your free
-            consult will mark exactly which cables to install, and where. The
+            plan will mark exactly which cables to install, and where. The
             the best time to install your network is alongside your electrical.
           </p>
 
