@@ -11,7 +11,7 @@
   import Barn from "$lib/Barn.svg.svelte";
 
   import { trustItems, testimonials, business } from "$lib";
-  import ClassBanner from "$lib/ClassBanner.svelte";
+  // import ClassBanner from "$lib/ClassBanner.svelte";
   import SocialSection from "$lib/SocialSection.svelte";
 
   // import type { PageProps } from "./$types";
@@ -29,7 +29,7 @@
 
 <main class="min-h-screen bg-zinc-950 text-white">
 
-  <ClassBanner />
+  <!-- <ClassBanner /> -->
 
   <!-- Hero -->
   <section
