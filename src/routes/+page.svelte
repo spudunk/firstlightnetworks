@@ -162,7 +162,7 @@
 
           <div class="flex flex-wrap gap-4">
             <a
-              href="/quote"
+              href="/plan"
               class="bg-white text-black px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-zinc-200 transition"
             >
               Get the free cabling plan
@@ -243,7 +243,7 @@
           You’ll have that plan within 3 days.
         </p>
         <a
-          href="/quote"
+          href="/plan"
           class="inline-block mt-8 bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:bg-zinc-200 transition"
         >
           Get the free cabling plan
@@ -350,10 +350,10 @@
             See the work
           </a>
           <a
-            href="/quote"
+            href="/plan"
             class="border border-zinc-700 hover:border-zinc-400 px-8 py-4 rounded-2xl font-semibold transition"
           >
-            Get a quote
+            Get the free plan
           </a>
         </div>
       </div>
@@ -404,7 +404,7 @@
         at no charge.
       </p>
       <a
-        href="/quote"
+        href="/plan"
         class="inline-block bg-white text-black px-12 py-5 rounded-2xl text-xl font-semibold hover:bg-zinc-200 transition"
       >
         Get the free cabling plan

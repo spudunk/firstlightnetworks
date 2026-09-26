@@ -74,6 +74,6 @@
 				</div>
 			{/each}
 		</div>
-		<p class="text-center text-sm mt-8 text-zinc-500">All resources are available immediately after you request a quote or sign up for the partner portal.</p>
+		<p class="text-center text-sm mt-8 text-zinc-500">All resources are available immediately after you request a free plan or sign up for the partner portal.</p>
 	</div>
 </main>

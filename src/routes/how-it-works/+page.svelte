@@ -1,15 +1,15 @@
 <script lang="ts">
-  import {  steps } from "$lib";
+  import { steps } from "$lib";
   import { howToSchema } from "$lib/schemas";
-  // import type { PageProps } from "./$types";
-  // let { data }: PageProps = $props();
 </script>
 
 <svelte:head>
-  <title>How Our WiFi Process Works • First Light Networks</title>
+  <title
+    >Install your network while the walls are open • First Light Networks LLC</title
+  >
   <meta
     name="description"
-    content="Discover the simple 5-step process First Light Networks uses to deliver reliable, pre-configured WiFi systems for custom home builders with professional results."
+    content="Free cabling plan for every new build. Your electrician installs the network cabling while there for the electrical. Cable plans are ready within 3 days. Save 60% or more versus after the walls are closed."
   />
   <script type="application/ld+json">
     {@html JSON.stringify(howToSchema)}
@@ -19,11 +19,12 @@
 <main class="max-w-5xl mx-auto px-6 py-16">
   <div class="text-center max-w-2xl mx-auto">
     <h1 class="text-6xl font-bold tracking-tighter">
-      Five simple steps.<br />Zero headaches.
+      Install your network while the walls are open.
     </h1>
     <p class="mt-4 text-xl text-zinc-400">
-      From consultation to homeowner handover, we handle the complexity so you
-      don't have to.
+      Fiber-internet is faster than wireless-mesh can handle. The free consult
+      marks exactly which cables to install, and where. The best time is
+      alongside the electrical.
     </p>
   </div>
 
@@ -34,7 +35,7 @@
     ></div>
 
     <div class="space-y-12">
-      {#each steps as step, i}
+      {#each steps as step (step.number)}
         <div class="md:flex gap-10 items-start">
           <div
             class="shrink-0 w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center text-3xl font-mono font-bold mb-4 md:mb-0"
@@ -50,33 +51,15 @@
     </div>
   </div>
 
-  <!-- Video / Demo placeholder -->
-  <div
-    class="mt-20 bg-zinc-900 rounded-3xl p-12 text-center border border-zinc-800 hidden"
-  >
-    <div
-      class="mx-auto w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center mb-6"
+  <div class="text-center mt-16">
+    <a
+      href="/plan"
+      class="inline-block bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:bg-zinc-200 transition"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="w-9 h-9"
-        fill="currentColor"
-        viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg
-      >
-    </div>
-    <h3 class="text-2xl font-semibold">Watch the 90-second install demo</h3>
-    <p class="text-zinc-400 mt-2">
-      See exactly how simple it is for your team on site.
+      Get the free cabling plan
+    </a>
+    <p class="text-sm text-zinc-400 mt-6">
+      Cable plans are ready within 3 days.
     </p>
-    <button
-      onclick={() => alert("Video player would open here")}
-      class="mt-8 px-10 py-4 border border-zinc-700 hover:bg-zinc-800 rounded-2xl transition"
-      >Play Video</button
-    >
-  </div>
-
-  <div class="text-center mt-12 text-sm text-zinc-300">
-    Most builders complete their first install in under 4 hours after watching
-    the demo once.
   </div>
 </main>

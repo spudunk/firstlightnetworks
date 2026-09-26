@@ -21,7 +21,7 @@
     <h2 class="text-3xl font-semibold text-white mt-12">Information We Collect</h2>
     <p>We collect information that you voluntarily provide to us when you:</p>
     <ul class="list-disc pl-6 space-y-2">
-      <li>Submit a quote request or contact form (name, email, phone, project details)</li>
+      <li>Submit a free plan request or contact form (name, email, phone, project details)</li>
       <li>Purchase pre-configured systems or services through our checkout (billing and shipping information)</li>
       <li>Communicate with us via email or other channels</li>
     </ul>

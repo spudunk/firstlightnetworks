@@ -19,7 +19,7 @@ export const socialLinks = [
 ] as const;
 
 export const headerLinks = [
-  { href: '/solutions', label: 'Solutions & Systems' },
+  { href: '/solutions', label: 'Solutions' },
   // { href: '/for-builders', label: 'For Builders' },
   { href: '/how-it-works', label: 'How It Works' },
   { href: '/portfolio', label: 'Portfolio' },
@@ -54,103 +54,134 @@ export const footerLinks = [
   }
 ]
 
+
+// Used in schemas and home page
 export const trustItems = ["Structured Cabling Plans", "Full indoor + outdoor coverage", "Pre-configured & tested systems", "3-year warranty", "Builder volume pricing"];
 
+// used in schemas and how it works
 export const steps = [
-  { number: '01', title: 'Consultation', desc: 'Share your building plans and requirements. We review and send a detailed proposal with coverage maps, hardware list, and pricing within 3 days.' },
-  { number: '02', title: 'System Design', desc: 'We create and send detailed cabling plans for your electrician so they can install, terminate, and test all the structured cabling while the walls are open.' },
-  { number: '03', title: 'Build & Test', desc: 'Your system is assembled, configured, and tested in our lab. We verify everything works then label, pack, and ship it.' },
-  { number: '04', title: 'Installation', desc: 'Systems arrive labeled and ready. Your electrician or low-voltage team follows our simple plug-and-play guide. Average install: 3–5 hours.' },
-  { number: '05', title: 'Support & Handover', desc: 'We provide remote go-live support. Homeowners receive a simple guide and we remain available for any future questions or optimizations.' }
+  {
+    number: "01",
+    title: "Free cabling plan",
+    desc: "Share the building plans. We mark where wireless access points go, indoors and outside, what type of cable to run, and where. Your electrician can install that plan during rough-in. You’ll have it within 3 days. No charge.",
+  },
+  {
+    number: "02",
+    title: "Install network cabling",
+    desc: "Your electrician installs the network cabling while there for the electrical, before drywall. It is tested before the walls close. Installing after the walls are closed costs about 3x more.",
+  },
+  {
+    number: "03",
+    title: "Custom system design",
+    desc: "We design a custom system, then build, configure, label, and test it. Plug-and-play hardware generally costs $1,000 to $5,000. This unlocks the full potential of fiber-internet.",
+  },
+  {
+    number: "04",
+    title: "Network installation",
+    desc: "The gear arrives configured, labeled, and tested. We support the install remotely. You don’t pay another contractor to travel. One less permit, one less contractor bill. We are happy to come out when necessary, and we’ll walk the crew through that first install so the next one is straightforward.",
+  },
+  {
+    number: "05",
+    title: "Ongoing Support",
+    desc: "Whole-property Wi-Fi, backup power, separate access for family, guests, and kids, and a year of remote support. Extend it if you want to keep it. Cameras can be designed in, not bolted on after move-in.",
+  },
 ];
 
+// used in schemas and portfolio
 export const projects = [
   {
-    type: 'Rural Residential',
-    title: 'Private Rural Ranch',
-    subtitle: '10-acre property, multiple outbuildings',
+    type: "Rural Residential",
+    title: "Private Rural Ranch",
+    subtitle: "10-acre property, multiple outbuildings",
     excerpt: [
-      'This customer lives in an area with poor cellular service. I installed an Omada wired network with indoor and outdoor Wi-Fi access points to extend coverage to the edges of the property. The owner can now make and receive calls and video calls anywhere on the property.',
-      'I also installed PoE cameras and a network video recorder for 24/7 recording of entrances from anywhere. They have an XGPON primary WAN, Starlink backup WAN, and UPS backup for the core of the network. They never lose Wi-Fi or internet access, even if the fiber is broken or the power goes out.'
+      "This customer lives in an area with poor cellular service. I installed an Omada wired network with indoor and outdoor Wi-Fi access points to extend coverage to the edges of the property. The owner can now make and receive calls and video calls anywhere on the property.",
+      "I also installed PoE cameras and a network video recorder for 24/7 recording of entrances from anywhere. They have an XGPON primary WAN, Starlink backup WAN, and UPS backup for the core of the network. They never lose Wi-Fi or internet access, even if the fiber is broken or the power goes out.",
     ],
-    result: 'Full property Wi-Fi • 24/7 security recorning • Never lose connectivity'
+    result:
+      "Full property Wi-Fi • 24/7 security recorning • Never lose connectivity",
   },
   {
-    type: 'Commercial',
-    title: 'Country Market, Gas Station & Diner',
-    subtitle: 'Two-building business',
+    type: "Commercial",
+    title: "Country Market, Gas Station & Diner",
+    subtitle: "Two-building business",
     excerpt: [
-      'This business owner was having connectivity problems with their POS systems, pumps, and devices across two buildings. They had an existing Starlink setup, but the Wi-Fi was inadequate, only covering a small portion of the primary cinder-block building. The second building is metal.',
-      'I installed an Omada wired network through both buildings with 4 access points and a wireless bridge between them. This completely solved the Wi-Fi coverage issues and provided wired connections for computers and a printer throughout both buildings. I also installed 20 cameras and an NVR for 24/7 recording and remote access.'
+      "This business owner was having connectivity problems with their POS systems, pumps, and devices across two buildings. They had an existing Starlink setup, but the Wi-Fi was inadequate, only covering a small portion of the primary cinder-block building. The second building is metal.",
+      "I installed an Omada wired network through both buildings with 4 access points and a wireless bridge between them. This completely solved the Wi-Fi coverage issues and provided wired connections for computers and a printer throughout both buildings. I also installed 20 cameras and an NVR for 24/7 recording and remote access.",
     ],
-    result: 'Reliable POS & device connectivity • Full coverage indoors & out • Remote camera access'
+    result:
+      "Reliable POS & device connectivity • Full coverage indoors & out • Remote camera access",
   },
   {
-    type: 'Commercial',
-    title: 'Dairy with Fuel Tanks',
-    subtitle: '300ft between metal barns, no trenching possible',
+    type: "Commercial",
+    title: "Dairy with Fuel Tanks",
+    subtitle: "300ft between metal barns, no trenching possible",
     excerpt: [
-      'This business owner wanted security cameras on their diesel tank and entrances at their dairy. They had fiber internet in the office. The best location for the cameras was on a metal barn building 300 ft from the office, separated by concrete and metal buildings. The entire area is concrete, so trenching was not an option. They also have large equipment that moves between buildings, so hanging aerial wire was not an option.',
-      'I installed an outdoor Omada mesh system with 2 nodes to extend the Wi-Fi over the entire property and connect a PoE switch in the outbuilding where the cameras were needed. Two PoE cameras were connected in the second building with 24/7 motion-triggered recording and remote access, plus outdoor Wi-Fi for the entire area.'
+      "This business owner wanted security cameras on their diesel tank and entrances at their dairy. They had fiber internet in the office. The best location for the cameras was on a metal barn building 300 ft from the office, separated by concrete and metal buildings. The entire area is concrete, so trenching was not an option. They also have large equipment that moves between buildings, so hanging aerial wire was not an option.",
+      "I installed an outdoor Omada mesh system with 2 nodes to extend the Wi-Fi over the entire property and connect a PoE switch in the outbuilding where the cameras were needed. Two PoE cameras were connected in the second building with 24/7 motion-triggered recording and remote access, plus outdoor Wi-Fi for the entire area.",
     ],
-    result: 'Outdoor mesh Wi-Fi • 24/7 motion-triggered recording • Remote access anywhere'
+    result:
+      "Outdoor mesh Wi-Fi • 24/7 motion-triggered recording • Remote access anywhere",
   },
   {
-    type: 'Commercial',
-    title: 'Resort Hotel & Recreation',
-    subtitle: '20+ acres with hills and poor cellular',
+    type: "Commercial",
+    title: "Resort Hotel & Recreation",
+    subtitle: "20+ acres with hills and poor cellular",
     excerpt: [
-      'This business is in an area with poor cellular service. They already had a Starlink setup with the maximum number of mesh nodes, but the Wi-Fi coverage was inadequate. For a primary WAN, I negotiated a business fiber connection in an area where FTTH isn’t available to residential customers. Starlink was used as the backup WAN, since the fiber infrastructure is pole-mounted.',
-      'An Omada wired network was installed to every room with 10 Gb MMF trunk lines serving as the backbone. 12 Wi-Fi access points were installed throughout the building and outdoors to cover all of the rooms, with most WAPs having future-proof 2.5 Gb uplinks.'
+      "This business is in an area with poor cellular service. They already had a Starlink setup with the maximum number of mesh nodes, but the Wi-Fi coverage was inadequate. For a primary WAN, I negotiated a business fiber connection in an area where FTTH isn’t available to residential customers. Starlink was used as the backup WAN, since the fiber infrastructure is pole-mounted.",
+      "An Omada wired network was installed to every room with 10 Gb MMF trunk lines serving as the backbone. 12 Wi-Fi access points were installed throughout the building and outdoors to cover all of the rooms, with most WAPs having future-proof 2.5 Gb uplinks.",
     ],
-    result: 'Enterprise-grade wired + wireless • Future-proof 2.5 Gb uplinks on most WAPs'
+    result:
+      "Enterprise-grade wired + wireless • Future-proof 2.5 Gb uplinks on most WAPs",
   },
   {
-    type: 'Rural Residential',
-    title: 'Rural Residential',
-    subtitle: '5-acre lot, 3 buildings',
+    type: "Rural Residential",
+    title: "Rural Residential",
+    subtitle: "5-acre lot, 3 buildings",
     excerpt: [
-      'This customer has a 5-acre lot with 3 buildings: a single-story stick-built house with attached garage, a small wood barn 300 ft north of the house, and a large metal shop 50 ft south of the house. There was suitable conduit available between the house and shop. The customer already had Starlink with built-in Wi-Fi.',
-      'The router was in the house, so the dish had interference due to tree coverage around the house. I surveyed the area for a new dish location, and there was an area 80 ft west of the shop with open sky for the dish’s field of view. I moved the Starlink router to the shop so the OEM Starlink cable could reach the new dish location. Cat 6 backhaul connects the house to the shop.',
-      'An outdoor access point on the end of the house nearest the barn covers the entire used outdoor space with Wi-Fi. Two indoor access points—one in the shop and one in the house—complete the coverage of indoor spaces.'
+      "This customer has a 5-acre lot with 3 buildings: a single-story stick-built house with attached garage, a small wood barn 300 ft north of the house, and a large metal shop 50 ft south of the house. There was suitable conduit available between the house and shop. The customer already had Starlink with built-in Wi-Fi.",
+      "The router was in the house, so the dish had interference due to tree coverage around the house. I surveyed the area for a new dish location, and there was an area 80 ft west of the shop with open sky for the dish’s field of view. I moved the Starlink router to the shop so the OEM Starlink cable could reach the new dish location. Cat 6 backhaul connects the house to the shop.",
+      "An outdoor access point on the end of the house nearest the barn covers the entire used outdoor space with Wi-Fi. Two indoor access points—one in the shop and one in the house—complete the coverage of indoor spaces.",
     ],
-    result: 'Clear line-of-sight Starlink • Whole-property Wi-Fi • Minimal disruption to landscaping'
+    result:
+      "Clear line-of-sight Starlink • Whole-property Wi-Fi • Minimal disruption to landscaping",
   },
   {
-    type: 'Agricultural',
-    title: 'Rural Farm',
-    subtitle: '5-acre lot, 4 buildings',
+    type: "Agricultural",
+    title: "Rural Farm",
+    subtitle: "5-acre lot, 4 buildings",
     excerpt: [
-      'This customer has a 5-acre lot with 4 buildings: a house, a garage 40 ft to the north of the house, a metal shop 20 ft north of the garage, and a barn 200 ft south of the house.',
-      'I installed Cat 6 direct burial between all of the buildings as a backbone. Indoor access points in each of the buildings cover all the indoor spaces and outdoor areas immediately around them.',
-      'Update: This system is still in operation 6 years later and has become the backbone for multiple critical IoT and automation devices. While the system is rudimentary and that hardware has been phased out, it\'s still completely reliable and forward-compatible. The customer will probably need to upgrade a few devices in 2-3 years, but the structured cabling won\'t will last another decade or more.'
+      "This customer has a 5-acre lot with 4 buildings: a house, a garage 40 ft to the north of the house, a metal shop 20 ft north of the garage, and a barn 200 ft south of the house.",
+      "I installed Cat 6 direct burial between all of the buildings as a backbone. Indoor access points in each of the buildings cover all the indoor spaces and outdoor areas immediately around them.",
+      "Update: This system is still in operation 6 years later and has become the backbone for multiple critical IoT and automation devices. While the system is rudimentary and that hardware has been phased out, it's still completely reliable and forward-compatible. The customer will probably need to upgrade a few devices in 2-3 years, but the structured cabling won't will last another decade or more.",
     ],
-    result: 'Wired backbone to every building • Indoor + immediate outdoor coverage • Simple, reliable'
+    result:
+      "Wired backbone to every building • Indoor + immediate outdoor coverage • Simple, reliable",
   },
   {
-    type: 'Residential',
-    title: 'Small Neighborhood Home',
-    subtitle: '3 Bedrooms + yard',
+    type: "Residential",
+    title: "Small Neighborhood Home",
+    subtitle: "3 Bedrooms + yard",
     excerpt: [
-      'This customer was remodeling their home on a 1 acre lot in a small-town neighborhood. They needed 6 cameras with 24/7 recording for full outdoor surveillance coverage. They had a Starlink kit that hadn\'t been installed.',
-      'We installed structured cabling to 2 wireless access points, 2 bedrooms wall-jacks, and 7 camera locations. We installed an indoor access point in the center of the house, an outdoor access point and Starlink dish on the back of the house, and cameras on 4 corners, the front porch, and over the back yard. All of this is powered by a lithium pure-sine UPS for high-reliability.',
-      'Finally, we configured a single WiFi network SSID using PPSK to seperate traffic into 3 VLANs with different passwords, rules, and security settings for the adults, the guests, and the kids.'
+      "This customer was remodeling their home on a 1 acre lot in a small-town neighborhood. They needed 6 cameras with 24/7 recording for full outdoor surveillance coverage. They had a Starlink kit that hadn't been installed.",
+      "We installed structured cabling to 2 wireless access points, 2 bedrooms wall-jacks, and 7 camera locations. We installed an indoor access point in the center of the house, an outdoor access point and Starlink dish on the back of the house, and cameras on 4 corners, the front porch, and over the back yard. All of this is powered by a lithium pure-sine UPS for high-reliability.",
+      "Finally, we configured a single WiFi network SSID using PPSK to seperate traffic into 3 VLANs with different passwords, rules, and security settings for the adults, the guests, and the kids.",
     ],
-    result: 'Highly-reliable WiFi for the house and back yard • Full outdoor camera coverage • Permanent ad secure Starlink install'
+    result:
+      "Highly-reliable WiFi for the house and back yard • Full outdoor camera coverage • Permanent ad secure Starlink install",
   },
   {
-    type: 'Future - Rural Residential',
-    title: 'Custom Log Cabin with Shop',
-    subtitle: 'New construction + outbuildings',
+    type: "Future - Rural Residential",
+    title: "Custom Log Cabin with Shop",
+    subtitle: "New construction + outbuildings",
     excerpt: [
-      'This customer built a new log cabin on their property near an existing outbuilding and large metal shop. They already have Starlink set up at the outbuilding, but the Wi-Fi isn\'t reaching the shop or the new cabin. The area has poor cellular service, so they are often disconnected.',
-      'The customer has already done landscaping around all three buildings, so trenching fiber or conduit between the buildings is not allowed. We designed an outdoor Wi-Fi mesh system dedicating the 6 GHz radio for an 80 MHz wide mesh backhaul to share the WAN from the outbuilding to the other two buildings. This choice leaves the 2.4 GHz and 5 GHz channels open for device connections. The 6GHz mesh creates a reliable >1Gbps backhaul with good stability due to clear line of sight.',
-      'Indoor access points installed in the cabin and shop will complete Wi-Fi coverage.',
-      // 'We don\'t deploy 6GHz Wi-Fi in most cases. It offers very fast speeds at short range with clear line of sight. It will be more useful in the future when VR headesets and robots use multi-gigabit connections, but right now, it\s great for outdoor mesh deployments. Clear line-of-sight between elevated outdoor access points is the only practical use today.' 
+      "This customer built a new log cabin on their property near an existing outbuilding and large metal shop. They already have Starlink set up at the outbuilding, but the Wi-Fi isn't reaching the shop or the new cabin. The area has poor cellular service, so they are often disconnected.",
+      "The customer has already done landscaping around all three buildings, so trenching fiber or conduit between the buildings is not allowed. We designed an outdoor Wi-Fi mesh system dedicating the 6 GHz radio for an 80 MHz wide mesh backhaul to share the WAN from the outbuilding to the other two buildings. This choice leaves the 2.4 GHz and 5 GHz channels open for device connections. The 6GHz mesh creates a reliable >1Gbps backhaul with good stability due to clear line of sight.",
+      "Indoor access points installed in the cabin and shop will complete Wi-Fi coverage.",
+      // 'We don\'t deploy 6GHz Wi-Fi in most cases. It offers very fast speeds at short range with clear line of sight. It will be more useful in the future when VR headesets and robots use multi-gigabit connections, but right now, it\s great for outdoor mesh deployments. Clear line-of-sight between elevated outdoor access points is the only practical use today.'
     ],
-    result: '6 GHz 80 MHz mesh links buildings • 2.4/5 GHz free for clients • Full indoor coverage • No trenching'
+    result:
+      "6 GHz 80 MHz mesh links buildings • 2.4/5 GHz free for clients • Full indoor coverage • No trenching",
   },
- 
 ];
 
 type Testimonial =
@@ -229,8 +260,8 @@ export const kits = [
       "Ultra-low Latency Design",
       "Commercial Network Racks"
     ],
-    buttonText: "Build Custom Quote",
-    link: "/quote"
+    buttonText: "Get the free plan",
+    link: "/plan"
   },
   {
     title: "10 Gig Premium Starter",

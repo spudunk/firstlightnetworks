@@ -34,7 +34,7 @@ export const websiteSchema = {
     "Turn-key WiFi solutions for custom home builders and home owners.",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://firstlightnetworks.com/quote?q={search_term_string}",
+    target: "https://firstlightnetworks.com/plan?q={search_term_string}",
     "query-input": "required name=search_term_string",
   },
 }

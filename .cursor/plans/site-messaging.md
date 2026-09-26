@@ -2,7 +2,9 @@
 
 Read this file and follow it. Do not reopen the strategy. The owner already rewrote the homepage. That page is the source of truth. Later pages must sound like it. Do not paraphrase back into the older sales-letter wording.
 
-The site is First Light Networks (`firstlightnetworks.com`), a SvelteKit 5 + Tailwind 4 app in this repo. Dark zinc layout, blue accents, rounded-3xl cards. Do not restyle. Change words, order, and the quote form.
+The site is First Light Networks (`firstlightnetworks.com`), a SvelteKit 5 + Tailwind 4 app in this repo. Dark zinc layout, blue accents, rounded-3xl cards. Do not restyle. Change words, order, and the plan form.
+
+The form slug is `/plan`. `/quote` permanently redirects there. Do not put the word quote back on the site. The existing-home button is **Get the free plan**.
 
 ## Homepage language to reuse
 
@@ -70,10 +72,10 @@ Kit prices ($999 and $4,250) stay on the kit cards. The $1,000 to $5,000 line is
 
 ## Homepage CTAs
 
-- New build: "Get the free cabling plan" → `/quote`
-- Existing: "Home already built?" → `#existing`, then "See the work" → `/portfolio` and "Get a quote" → `/quote`
+- New build: "Get the free cabling plan" → `/plan`
+- Existing: "Home already built?" → `#existing`, then "See the work" → `/portfolio` and "Get the free plan" → `/plan`
 
-When the quote form is split, change only the existing-home quote link to `/quote?type=existing`.
+When the quote form is split, change only the existing-home quote link to `/plan?type=existing`.
 
 ## Step 1 — Header, footer, How It Works, llms.txt
 
@@ -81,7 +83,7 @@ Do this first. The second click currently sells the old business.
 
 ### Header (`src/routes/+layout.svelte`)
 
-- Both "Get Quote" labels (desktop button, mobile menu) become **Free cabling plan**. Keep `href="/quote"`.
+- Both "Get Quote" labels (desktop button, mobile menu) become **Free cabling plan**. Keep `href="/plan"`.
 
 - Keep Contact as the secondary button.
 
@@ -120,7 +122,7 @@ Do not mention install hours. Do not put the $1,000 to $2,000 cabling price in t
 - Delete the hidden demo block and the line about completing an install in under 4 hours after watching the demo.
 - Title: `Install your network while the walls are open • First Light Networks LLC`
 - Meta: free cabling plan, electrician installs it while there for the electrical, within 3 days, save 60% or more versus after the walls are closed.
-- Closing link: **Get the free cabling plan** → `/quote`, with "Cable plans are ready within 3 days."
+- Closing link: **Get the free cabling plan** → `/plan`, with "Cable plans are ready within 3 days."
 
 Keep the existing timeline layout.
 
@@ -148,14 +150,14 @@ Update `solutionsSchema` in `src/lib/schemas.ts` to that service, not "pre-confi
 
 ### Quote form
 
-`/quote` is the free cabling plan for a new build, and a quote for an existing home. One form, two paths.
+`/plan` is the free plan for a new build and for an existing home. One form, two paths. Do not call either path a quote.
 
 **Choice at the top:**
 
 - New build (default)
 - Home already built
 
-Honor `?type=existing`. Set that query on the homepage existing-home "Get a quote" link in the same change.
+Honor `?type=existing`. Set that query on the homepage existing-home "Get the free plan" link in the same change.
 
 **New build fields:** name, email, phone (keep current validation), role (builder, homeowner, electrician), where the project is (plans / rough-in not started / walls still open / walls closed — walls closed means existing home), whether plans can be shared. Optional note. Do not require rooms or acres. Do not ask them to size a kit.
 
@@ -169,15 +171,15 @@ Honor `?type=existing`. Set that query on the homepage existing-home "Get a quot
 - New-build fine print: Cable plans are ready within 3 days.
 - Existing headline: **Home already built?**
 - Existing support: We still do existing homes, shops, and properties. It takes longer with the sheetrock on, but the result is the same.
-- Sidebar must match the path. New build: share the plans, get the cable layout within 3 days, then we design the system if you want it. Existing: share the property, we size coverage, quote within 3 days.
-- Success: they'll hear within 3 days. No "24 hours" left in `src/routes/quote/+page.svelte`.
+- Sidebar must match the path. New build: share the plans, get the cable layout within 3 days, then we design the system if you want it. Existing: share the property, we size coverage, plan within 3 days.
+- Success: they'll hear within 3 days. No "24 hours" left in `src/routes/plan/+page.svelte`.
 
-**Server (`src/routes/quote/+page.server.ts`, `quoteSchema` in `src/lib/schemas.ts`, `src/lib/server/db/schema.ts`):**
+**Server (`src/routes/plan/+page.server.ts`, `quoteSchema` in `src/lib/schemas.ts`, `src/lib/server/db/schema.ts`):**
 
 - A new-build submission must be valid without rooms and acres.
 - Suggested columns: `projectType` (`new-build` | `existing`), `role` (nullable text), `buildStage` (nullable text), `hasPlans` (nullable boolean), `notes` (nullable text). Keep existing columns. New submissions must set `projectType` explicitly.
 - Rooms and acres required for `existing`, optional for `new-build`. Integrations optional on both.
-- Email to `chris@firstlightnetworks.com` must include the new fields. Subject should say cable plan vs quote.
+- Email to `chris@firstlightnetworks.com` must include the new fields. Subject should say free plan. Do not use the word quote.
 - Generate a Drizzle migration. Apply it locally if that is the project habit (`db:generate`, `db:migrate:local`). Do not run `db:migrate:cf` unless the owner asks.
 
 Title: `Free cabling plan • First Light Networks LLC`
@@ -216,7 +218,7 @@ Keep the founder story. The turn is already close: wiring under one electrical p
 - Existing: use the homepage paragraph. Do not say the savings are less obvious.
 - Remove "100% customer success rate."
 - Title and meta: install the network while the walls are open. Not "Premium Builder WiFi" as the identity.
-- Closing button: **Get the free cabling plan** → `/quote`. If the form split exists, add a text link for an existing home to `/quote?type=existing`. If this step runs first, link existing homes to `/quote` and do not invent the query.
+- Closing button: **Get the free cabling plan** → `/plan`. If the form split exists, add a text link for an existing home to `/plan?type=existing`. If this step runs first, link existing homes to `/plan` and do not invent the query.
 
 ## Step 4 — For builders
 
@@ -236,7 +238,7 @@ Only after the sentences above are in the pages.
 `src/lib/schemas.ts`:
 
 - `organizationSchema` description still says turnkey WiFi for home builders. Replace with the homepage offer: free cabling plan, cable installed with the electrical, a Wi-Fi system the family can count on, existing homes still welcome. Keep `HomeAndConstructionBusiness` unless a clearly better schema.org type is obvious. Do not invent a rating. `aggregateRating` may stay.
-- `websiteSchema` description: the footer sentence. Remove `potentialAction`. `/quote?q=` is not search. Do not build search.
+- `websiteSchema` description: the footer sentence. Remove `potentialAction`. `/plan?q=` is not search. Do not build search.
 - `howToSchema` name and description: install the network while the walls are open. Steps already come from `steps`.
 - Recheck `solutionsSchema` and `portfolioSchema`.
 - Grep for `24 hours`, `turnkey`, `Turn-key`, `Premium Builder`, `volume pricing`, `partner portal`, `$1,000 to $2,000`, `1000 to 2000`.

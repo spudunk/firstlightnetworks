@@ -50,11 +50,11 @@
         </div>
         <div>
           <span
-            class="text-sm xs:text-md sm:text-2xl font-semibold tracking-tight"
+            class="inline text-sm md:text-lg lg:text-2xl font-semibold tracking-tight"
           >
             {business.name}
           </span>
-          <p class="text-xs text-zinc-400 -mt-1 hidden sm:block">
+          <p class="text-xs text-zinc-400 -mt-1 block">
             Connections for the Future
           </p>
         </div>
@@ -72,17 +72,18 @@
       <div class="flex items-center gap-4">
         <a
           href="/contact"
-          class="hidden md:block border border-zinc-700 hover:bg-zinc-900 px-5 py-2.5 rounded-2xl text-sm font-medium transition"
+          class="hidden sm:block border border-zinc-700 hover:bg-zinc-900 px-5 py-2.5 rounded-2xl text-sm font-medium transition"
+          onclick={() => (mobileOpen = false)}
         >
           Contact
         </a>
 
         <a
-          href="/quote"
-          onclick={() => (mobileOpen = !mobileOpen)}
-          class="bg-blue-600 hover:bg-blue-500 px-2 md:px-4 py-3 rounded-2xl text-sm font-semibold transition text-nowrap"
+          href="/plan"
+          class="hidden md:block bg-blue-600 hover:bg-blue-500 px-2 md:px-4 py-3 rounded-2xl text-sm font-semibold transition text-nowrap"
+          onclick={() => (mobileOpen = false)}
         >
-          Get Quote
+          Free cabling plan
         </a>
 
         <!-- Mobile Menu Button -->
@@ -125,9 +126,9 @@
         >
 
         <a
-          href="/quote"
+          href="/plan"
           class="mt-2 bg-blue-600 text-center py-3 rounded-2xl font-semibold"
-          onclick={() => (mobileOpen = false)}>Get Quote</a
+          onclick={() => (mobileOpen = false)}>Free cabling plan</a
         >
       </div>
     {/if}
@@ -152,7 +153,8 @@
             <span class="text-xl font-semibold">{business.name}</span>
           </div>
           <p class="max-w-xs">
-            Turn-key WiFi solutions for custom home builders and home owners.
+            Install your network while the walls are open. Free cabling plan for
+            every new build. Existing homes, shops, and properties welcome.
           </p>
           <div class="mt-6 flex items-center gap-2">
             {#each socialLinks as social}

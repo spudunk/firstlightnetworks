@@ -4,7 +4,7 @@ const b64contact = {
   tel: btoa('(360) 827-2736'),
   telLink: btoa('tel:+13608272736'),
   email: btoa('chris@firstlightnetworks.com'),
-  emailLink: btoa('mailto:chris@firstlightnetworks.com?subject=Custom%20Quote')
+  emailLink: btoa('mailto:chris@firstlightnetworks.com?subject=Free%20plan')
 }
 
 export const load: PageServerLoad = async ({ params }) => {
