@@ -19,6 +19,12 @@
       "migrations_pattern": "drizzle/*/migration.sql",
     },
   ],
+  "kv_namespaces": [
+		{
+			"binding": "KV",
+			"id": "d1db43575c5f4fbfb890771c999d5ffe"
+		}
+	],
   "send_email": [
     {
       "name": "EMAIL",
