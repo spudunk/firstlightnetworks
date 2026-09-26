@@ -55,7 +55,7 @@
 
       {#if showJoin}
         <a target="_blank" href="https://meet.google.com/mmf-jcrg-cjd">
-          click here to join:
+          click here to join <span class="font-bold">FLN - Network Basics</span> at 10am Eastern:
           <span class="underline"> meet.google.com/mmf-jcrg-cjd </span>
         </a>
       {/if}
