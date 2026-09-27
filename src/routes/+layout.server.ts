@@ -2,12 +2,12 @@ import { env } from '$env/dynamic/private';
 import { getGoogleRating } from '$lib/server';
 import type { LayoutServerLoad } from './$types';
 
-const RATING_KEY = 'google-rating';
+const RATING_KEY = 'fln-google-rating';
 const FRESH_MS = 30 * 60 * 1000;
 
 type StoredRating = {
 	rating: number | null;
-	reviewCount: number | null;
+	ratingCount: number | null;
 	fetchedAt: number;
 };
 
@@ -19,17 +19,17 @@ export const load: LayoutServerLoad = ({ platform }) => {
 		googleRating: (async () => {
 			const cached = kv ? await kv.get<StoredRating>(RATING_KEY, 'json') : null;
 			if (cached && Date.now() - cached.fetchedAt < FRESH_MS) {
-        // console.log("reviews from cache")
-				return { rating: cached.rating, reviewCount: cached.reviewCount };
+        // console.log("ratings from cache")
+				return { rating: cached.rating, ratingCount: cached.ratingCount };
 			}
-      // console.log("reviews from API")
+      // console.log("ratings from API")
 			const fresh = await getGoogleRating(apiKey);
 			if (kv && fresh.rating != null) {
 				await kv.put(RATING_KEY, JSON.stringify({ ...fresh, fetchedAt: Date.now() }));
 				return fresh;
 			}
 
-			if (cached) return { rating: cached.rating, reviewCount: cached.reviewCount };
+			if (cached) return { rating: cached.rating, ratingCount: cached.ratingCount };
 			return fresh;
 		})()
 	};

@@ -195,7 +195,7 @@
               {:then googleRating}
                 <StarRating
                   score={googleRating.rating ?? business.rating.score}
-                  count={googleRating.reviewCount ?? business.rating.count}
+                  count={googleRating.ratingCount ?? business.rating.count}
                   label={business.rating.label}
                 />
               {/await}
