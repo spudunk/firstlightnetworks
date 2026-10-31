@@ -336,11 +336,7 @@
           class="inline-flex hover:opacity-80 transition"
           aria-label="Read our Google reviews"
         >
-          <StarRating
-            score={business.rating.score}
-            count={business.rating.count}
-            label={business.rating.label}
-          />
+          <StarRating live />
         </a>
         <p class="text-sm text-zinc-400">
           15+ years networking expertise. Serving builders and homeowners

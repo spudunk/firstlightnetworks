@@ -18,11 +18,8 @@
   import Barn from "$lib/Barn.svg.svelte";
 
   import { testimonials, business } from "$lib";
-  import type { PageProps } from "./$types";
   // ClassBanner stays off the homepage. It fights this story.
   import SocialSection from "$lib/SocialSection.svelte";
-
-  let { data }: PageProps = $props();
 
   type Point = {
     title: string;
@@ -186,19 +183,7 @@
               class="hover:opacity-80 transition"
               aria-label="Read our Google reviews"
             >
-              {#await data.googleRating}
-                <StarRating
-                  score={business.rating.score}
-                  count={business.rating.count}
-                  label={business.rating.label}
-                />
-              {:then googleRating}
-                <StarRating
-                  score={googleRating.rating ?? business.rating.score}
-                  count={googleRating.ratingCount ?? business.rating.count}
-                  label={business.rating.label}
-                />
-              {/await}
+              <StarRating live />
             </a>
             <div class="hidden sm:block h-4 w-px bg-zinc-700"></div>
             <div>15+ years networking expertise</div>

@@ -3,6 +3,7 @@
   import Logo from "$lib/Logo.svelte";
   import type { LayoutProps } from "./$types";
   import { slide } from "svelte/transition";
+  import { setContext } from "svelte";
   import { business, headerLinks, footerLinks, socialLinks } from "$lib";
   import { organizationSchema, websiteSchema  } from "$lib/schemas";
   import GoogleIcon from "virtual:icons/simple-icons/google";
@@ -18,6 +19,8 @@
 
   let { data, children }: LayoutProps = $props();
   let mobileOpen = $state(false);
+
+  setContext("googleRating", data.googleRating);
 
 </script>
 
