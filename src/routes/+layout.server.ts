@@ -4,7 +4,7 @@ import type { LayoutServerLoad } from './$types';
 
 const SITE = 'firstlightnetworks';
 const RATING_KEY = 'fln-google-rating';
-const FRESH_MS = 2 * 60 * 60 * 1000;
+const FRESH_MS = 24 * 60 * 60 * 1000;
 
 type StoredRating = {
 	rating: number | null;
